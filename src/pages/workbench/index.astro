@@ -1,0 +1,67 @@
+---
+import { getCollection, render } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import Main from "@/components/Main.astro";
+import Footer from "@/components/Footer.astro";
+import config from "@/config";
+
+const entries = await getCollection("workbench");
+const todo = entries.find(e => e.data.type === "todo");
+const notes = entries.filter(e => e.data.type === "note");
+const records = entries
+  .filter(e => e.data.type === "record")
+  .sort((a, b) => (a.data.date < b.data.date ? 1 : -1));
+
+const { Content: TodoContent } = todo ? await render(todo) : { Content: null };
+---
+
+<Layout title={`工作台 | ${config.site.title}`} description="每日待办、工作记录与 Hermes 会话摘要">
+  <Header />
+
+  <Breadcrumb />
+
+  <Main pageTitle="工作台">
+    <div class="app-prose">
+      {notes.length > 0 && (
+        (await Promise.all(notes.map(n => render(n)))).map(({ Content }) => (
+          <div class="mb-6">
+            <Content />
+          </div>
+        ))
+      )}
+
+      <h2>今日待办</h2>
+      {TodoContent ? (
+        <div class="mb-6 rounded-lg border border-border p-4">
+          <TodoContent />
+        </div>
+      ) : (
+        <p>暂无待办。</p>
+      )}
+
+      <h2>每日记录</h2>
+      <ul class="mb-6 mt-4 space-y-2">
+        {records.map(r => (
+          <li>
+            <a href={`/workbench/${r.id}/`} class="hover:text-accent font-medium">
+              {r.data.title}
+            </a>
+            {r.data.date && (
+              <span class="text-muted-foreground text-sm"> · {r.data.date}</span>
+            )}
+          </li>
+        ))}
+      </ul>
+
+      <div class="mt-8 rounded-lg border border-dashed border-border p-4 text-sm">
+        <strong>内容管理后台：</strong>
+        本页面与博客共用 <a href="/admin/" class="hover:text-accent underline">Decap CMS 后台（/admin）</a>，
+        网页编辑器直接读写仓库里的 markdown，改动自动提交到 GitHub。
+      </div>
+    </div>
+  </Main>
+
+  <Footer />
+</Layout>
