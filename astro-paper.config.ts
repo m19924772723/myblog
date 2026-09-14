@@ -2,7 +2,7 @@ import { defineAstroPaperConfig } from "./src/types/config";
 
 export default defineAstroPaperConfig({
   site: {
-    url: "https://ling-ou-pq.github.io/",
+    url: "https://ling-ou-pq.github.io/myblog/",
     title: "ling-ou-pq · 博客",
     description: "电子信息 / 人工智能方向研究生的个人博客与工作台——每日记录、学习笔记、实验报告与随笔。",
     author: "ling-ou-pq",
