@@ -1,0 +1,164 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import Main from "@/components/Main.astro";
+import Footer from "@/components/Footer.astro";
+import config from "@/config";
+import { categories, resources } from "@/data/nav/resources";
+import "@/styles/nav.css";
+
+const payload = JSON.stringify({ categories, resources });
+---
+
+<Layout
+  title={`万象导航 · OMNIA | ${config.site.title}`}
+  description="我的常用资源库：9 类 52 个真实站点，站内检索 + 外部搜索 + 收藏"
+>
+  <Header />
+
+  <Breadcrumb />
+
+  <Main pageTitle="万象导航 · OMNIA" class="app-prose">
+    <script
+      is:inline
+      type="application/json"
+      id="nav-data"
+      set:html={payload}
+    />
+
+    <section class="nav-hero">
+      <h1 class="text-accent">万象导航 · OMNIA</h1>
+      <p class="nav-sub">
+        学习 · 工作 · 创造 —— 我的常用资源库。在站内检索，或用 Google / Bing / GitHub 全网搜索。
+      </p>
+      <div class="nav-search-row">
+        <input
+          id="nav-search"
+          class="nav-search"
+          type="search"
+          placeholder="搜索站点、关键词、标签…（按 / 或 Ctrl+K 聚焦）"
+          autocomplete="off"
+        />
+        <select id="nav-provider" class="nav-provider" title="搜索范围">
+          <option value="site">站内检索</option>
+          <option value="google">Google</option>
+          <option value="bing">Bing</option>
+          <option value="github">GitHub</option>
+        </select>
+        <button id="nav-random" class="nav-random" type="button">🎲 随机发现</button>
+      </div>
+    </section>
+
+    <div class="nav-chips">
+      {(["all", "featured", "free", "favorites"] as const).map(m => (
+        <button
+          class:list={["nav-chip", { active: m === "all" }]}
+          data-kind="mode"
+          data-key={m}
+          type="button"
+        >
+          {m === "all" && "全部"}
+          {m === "featured" && "✦ 编辑精选"}
+          {m === "free" && "免费可用"}
+          {m === "favorites" && "★ 我的收藏"}
+        </button>
+      ))}
+      <span class="nav-chip-sep" aria-hidden="true">·</span>
+      {categories.map(c => (
+        <button class="nav-chip" data-kind="cat" data-key={c.id} type="button">
+          {c.icon} {c.name}
+        </button>
+      ))}
+    </div>
+
+    <p class="nav-count">
+      <span id="nav-count"></span>
+    </p>
+
+    {categories.map(cat => {
+      const items = resources.filter(r => r.category === cat.id);
+      return (
+        <section id={`section-${cat.id}`} class="nav-section">
+          <div class="nav-section-head">
+            <span
+              class="nav-sec-icon"
+              style={`background:${cat.accent}`}
+              aria-hidden="true"
+            >
+              {cat.icon}
+            </span>
+            <h2>{cat.name}</h2>
+            <span class="nav-sec-en">
+              {cat.englishName} · {items.length}
+            </span>
+          </div>
+          <div class="nav-grid">
+            {items.map(r => (
+              <article
+                id={`card-${r.id}`}
+                class="nav-card"
+                style={`--nav-cat-accent:${cat.accent}`}
+              >
+                <span
+                  class="nav-card-badge"
+                  style={`background:${r.color || cat.accent}`}
+                >
+                  {r.initials}
+                </span>
+                <div class="nav-card-body">
+                  <a
+                    class="nav-card-title"
+                    href={r.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {r.name}
+                    {(r.featured || r.free) && (
+                      <span class="nav-badges">
+                        {r.featured && (
+                          <span class="nav-tag" style="color:#b45309">✦ 精选</span>
+                        )}
+                        {r.free && (
+                          <span class="nav-tag" style="color:#047857">免费</span>
+                        )}
+                      </span>
+                    )}
+                  </a>
+                  <p class="nav-card-desc">{r.description}</p>
+                  <div class="nav-card-tags">
+                    {r.tags.slice(0, 3).map(t => (
+                      <span class="nav-tag">{t}</span>
+                    ))}
+                  </div>
+                </div>
+                <button
+                  class="nav-fav"
+                  data-fav={r.id}
+                  type="button"
+                  title="收藏"
+                  aria-label={`收藏 ${r.name}`}
+                >
+                  ☆
+                </button>
+              </article>
+            ))}
+          </div>
+        </section>
+      );
+    })}
+
+    <div class="nav-cross">
+      🔗 与本站其它系统互通：
+      <a href="/">博客首页</a> ·
+      <a href="/workbench/">工作台</a> ·
+      <a href="/about/">关于</a>
+    </div>
+  </Main>
+
+  <Footer />
+</Layout>
+
+<script>
+  import "@/scripts/nav";
+</script>
