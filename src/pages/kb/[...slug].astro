@@ -39,7 +39,7 @@ const all = (await getCollection("knowledge"))
   });
 const { Content } = await render(entry);
 const catInfo = KNOWLEDGE_CATEGORIES.find(c => c.id === entry.data.category)!;
-const BASE = import.meta.env.BASE_URL;
+const BASE = import.meta.env.BASE_URL.replace(/\/+$/, "") + "/";
 
 const cjkCount = ((entry.body ?? "").match(/[\u4e00-\u9fff]/g) ?? []).length;
 const readMin = Math.max(1, Math.round(cjkCount / 300));

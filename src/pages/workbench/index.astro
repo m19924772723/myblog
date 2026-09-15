@@ -57,21 +57,21 @@ const { Content: TodoContent } = todo ? await render(todo) : { Content: null };
 
       <div class="mt-8 rounded-lg border border-dashed border-border p-4 text-sm">
         <strong>内容管理后台：</strong>
-        本页面与博客共用 <a href={`${import.meta.env.BASE_URL}admin/`} class="hover:text-accent underline">Decap CMS 后台（/admin）</a>，
+        本页面与博客共用 <a href={`${import.meta.env.BASE_URL.replace(/\/+$/, "")}/admin/`} class="hover:text-accent underline">Decap CMS 后台（/admin）</a>，
         网页编辑器直接读写仓库里的 markdown，改动自动提交到 GitHub。
       </div>
 
       <div class="mt-4 rounded-lg border border-dashed border-border p-4 text-sm">
         <strong>资源导航：</strong>
-        本站还集成了 <a href={`${import.meta.env.BASE_URL}nav/`} class="hover:text-accent underline">万象导航（/nav）</a>
-        —— 9 类 52 个常用站点，支持检索、收藏与随机发现。
+        本站还集成了 <a href={`${import.meta.env.BASE_URL.replace(/\/+$/, "")}/nav/`} class="hover:text-accent underline">万象导航（/nav）</a>
+        —— 9 类 53 个常用站点，支持检索、收藏与随机发现。
       </div>
 
       <div class="mt-4 rounded-lg border border-dashed border-border p-4 text-sm">
         <strong>知识库：</strong>
-        <a href={`${import.meta.env.BASE_URL}kb/`} class="hover:text-accent underline">个人知识库（/kb）</a>
+        <a href={`${import.meta.env.BASE_URL.replace(/\/+$/, "")}/kb/`} class="hover:text-accent underline">个人知识库（/kb）</a>
         收录编程、科研、AI、效率、学习五大类速查手册；右上角
-        <a href={`${import.meta.env.BASE_URL}search/`} class="hover:text-accent underline">全局搜索</a>
+        <a href={`${import.meta.env.BASE_URL.replace(/\/+$/, "")}/search/`} class="hover:text-accent underline">全局搜索</a>
         可跨四个系统一站式检索。
       </div>
     </div>

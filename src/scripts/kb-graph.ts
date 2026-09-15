@@ -21,7 +21,7 @@ interface GData {
 }
 
 const graphDataEl = document.getElementById("kb-graph-data") as HTMLScriptElement;
-const data: GData = JSON.parse(graphDataEl.textContent || "{}");
+const graphData: GData = JSON.parse(graphDataEl.textContent || "{}");
 const canvas = document.getElementById("kb-graph") as HTMLCanvasElement;
 const tip = document.getElementById("kb-graph-tip") as HTMLDivElement;
 const ctx = canvas.getContext("2d")!;
@@ -41,7 +41,7 @@ resize();
 // ---- 物理模拟状态 ----
 const pos = new Map<string, { x: number; y: number; vx: number; vy: number }>();
 const nodes = new Map<string, GNode>();
-data.nodes.forEach(n => {
+graphData.nodes.forEach(n => {
   nodes.set(n.id, n);
   pos.set(n.id, {
     x: Math.random() * W(),
@@ -51,7 +51,7 @@ data.nodes.forEach(n => {
   });
 });
 
-const links = data.edges.map(e => ({ a: pos.get(e.a)!, b: pos.get(e.b)! }));
+const links = graphData.edges.map(e => ({ a: pos.get(e.a)!, b: pos.get(e.b)! }));
 
 const REPULSION = 1400; // 斥力系数
 const SPRING = 0.06; // 弹簧系数

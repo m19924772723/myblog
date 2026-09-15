@@ -10,7 +10,7 @@ import { KNOWLEDGE_CATEGORIES } from "@/content.config";
 import "@/styles/kb.css";
 
 const all = (await getCollection("knowledge")).filter(e => !e.data.draft);
-const BASE = import.meta.env.BASE_URL;
+const BASE = import.meta.env.BASE_URL.replace(/\/+$/, "") + "/";
 
 // 图谱数据：文章节点 + 分类节点；边 = 归属 + 共享标签
 const nodes: { id: string; label: string; kind: "article" | "category"; color: string; url?: string; size: number }[] = [];

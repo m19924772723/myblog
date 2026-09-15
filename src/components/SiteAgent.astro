@@ -1,0 +1,74 @@
+---
+// 站内助理 SiteAgent — 纯前端规则 agent，回答基于本库数据
+// 数据：知识库文章 + 导航站点 + 博客文章（构建时内嵌，零后端零密钥）
+import { getCollection } from "astro:content";
+import { categories, resources } from "@/data/nav/resources";
+import "@/styles/site-agent.css";
+
+const BASE = import.meta.env.BASE_URL.replace(/\/+$/, "") + "/";
+const kb = (await getCollection("knowledge"))
+  .filter(e => !e.data.draft)
+  .map(e => ({
+    id: e.id,
+    title: e.data.title,
+    desc: e.data.description,
+    tags: e.data.tags,
+    cat: e.data.category,
+    url: `${BASE}kb/${e.id}/`,
+  }));
+const navItems = resources.map(r => ({
+  id: r.id,
+  name: r.name,
+  desc: r.description,
+  cat: r.category,
+  tags: r.tags,
+  url: r.url,
+}));
+const posts = (await getCollection("posts"))
+  .filter(p => !p.data.draft)
+  .map(p => ({
+    id: p.id,
+    title: p.data.title,
+    desc: p.data.description,
+    url: `${BASE}posts/${p.id}/`,
+  }));
+const payload = JSON.stringify({ base: BASE, kb, navItems, posts });
+---
+
+<div id="site-agent" class="sa-root">
+  <button id="sa-fab" class="sa-fab" type="button" aria-label="打开站内助理" title="站内助理">
+    <span class="sa-fab-icon">🤖</span>
+  </button>
+
+  <div id="sa-panel" class="sa-panel" hidden>
+    <div class="sa-head">
+      <span>🤖 站内助理</span>
+      <span class="sa-head-sub">基于知识库 · 导航 · 博客</span>
+      <button id="sa-close" class="sa-close" type="button" aria-label="关闭">✕</button>
+    </div>
+    <div id="sa-msgs" class="sa-msgs">
+      <div class="sa-msg sa-bot">
+        你好，我是站内助理 👋 可以问我：<br />
+        · 「Git 怎么提交」→ 知识库速查<br />
+        · 「有哪些 AI 工具」→ 万象导航<br />
+        · 「工作台在哪」→ 四系统指路
+      </div>
+    </div>
+    <div class="sa-quick" id="sa-quick">
+      <button type="button">Git 怎么用</button>
+      <button type="button">推荐 AI 工具</button>
+      <button type="button">知识库有什么</button>
+      <button type="button">工作台在哪</button>
+    </div>
+    <div class="sa-input-row">
+      <input id="sa-input" type="text" placeholder="问点什么…（Enter 发送）" autocomplete="off" />
+      <button id="sa-send" type="button">发送</button>
+    </div>
+  </div>
+
+  <script type="application/json" id="sa-data" set:html={payload}></script>
+</div>
+
+<script>
+  import "@/scripts/site-agent";
+</script>
