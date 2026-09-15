@@ -1,0 +1,107 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import Main from "@/components/Main.astro";
+import Footer from "@/components/Footer.astro";
+import config from "@/config";
+import { getCollection } from "astro:content";
+import { KNOWLEDGE_CATEGORIES } from "@/content.config";
+import "@/styles/kb.css";
+
+const all = (await getCollection("knowledge")).filter(e => !e.data.draft);
+const BASE = import.meta.env.BASE_URL;
+
+// 图谱数据：文章节点 + 分类节点；边 = 归属 + 共享标签
+const nodes: { id: string; label: string; kind: "article" | "category"; color: string; url?: string; size: number }[] = [];
+const edges: { a: string; b: string }[] = [];
+
+KNOWLEDGE_CATEGORIES.forEach(c => {
+  nodes.push({ id: `cat:${c.id}`, label: c.name, kind: "category", color: c.color, size: 13 });
+});
+all.forEach(e => {
+  const cat = KNOWLEDGE_CATEGORIES.find(c => c.id === e.data.category)!;
+  nodes.push({
+    id: e.id,
+    label: e.data.title,
+    kind: "article",
+    color: cat.color,
+    url: `${BASE}kb/${e.id}/`,
+    size: 8,
+  });
+  edges.push({ a: `cat:${e.data.category}`, b: e.id });
+});
+// 共享标签 → 文章间连线（最多 3 条/文，避免过密）
+const tagMap = new Map<string, string[]>();
+all.forEach(e => e.data.tags.forEach(t => {
+  if (!tagMap.has(t)) tagMap.set(t, []);
+  tagMap.get(t)!.push(e.id);
+}));
+const linked = new Set<string>();
+tagMap.forEach(ids => {
+  if (ids.length < 2) return;
+  for (let i = 0; i < ids.length - 1; i++) {
+    for (let j = i + 1; j < ids.length; j++) {
+      const key = [ids[i], ids[j]].sort().join("|");
+      if (!linked.has(key)) {
+        linked.add(key);
+        edges.push({ a: ids[i], b: ids[j] });
+      }
+    }
+  }
+});
+
+const payload = JSON.stringify({ nodes, edges });
+---
+
+<Layout
+  title={`知识图谱 | 知识库 | ${config.site.title}`}
+  description="知识库文章与分类的关系图谱：节点即文档，连线即关联"
+>
+  <Header />
+
+  <Breadcrumb />
+
+  <Main pageTitle="知识图谱" class="app-prose">
+    <script
+      is:inline
+      type="application/json"
+      id="kb-graph-data"
+      set:html={payload}
+    />
+
+    <section class="kb-hero">
+      <p class="kb-sub">
+        参考 WeKnora Wiki Mode 的关系网络：<strong>{all.length} 篇文档</strong> ·{" "}
+        <strong>{KNOWLEDGE_CATEGORIES.length} 个分类</strong> ·{" "}
+        <strong>{edges.length} 条关联</strong>。
+        点住节点可以拖动，点击文章节点跳转查看。
+      </p>
+    </section>
+
+    <div class="kb-graph-wrap">
+      <canvas id="kb-graph" width="800" height="560"></canvas>
+      <div id="kb-graph-tip" class="kb-graph-tip"></div>
+    </div>
+
+    <div class="kb-graph-legend">
+      <span class="lg-item"><span class="lg-dot" style="background:#666;border-radius:2px"></span> 分类节点</span>
+      <span class="lg-item"><span class="lg-dot" style="background:var(--kb-accent)"></span> 文章节点（按分类着色）</span>
+      <span class="lg-item">── 归属 / 共享标签连线</span>
+    </div>
+
+    <div class="kb-cross">
+      🔗 与本站其它系统互通：
+      <a href={`${BASE}kb/`}>知识库首页</a> ·
+      <a href={`${BASE}workbench/`}>工作台</a> ·
+      <a href={`${BASE}nav/`}>万象导航</a> ·
+      <a href={`${BASE}search/`}>全局搜索</a>
+    </div>
+  </Main>
+
+  <Footer />
+</Layout>
+
+<script>
+  import "@/scripts/kb-graph";
+</script>

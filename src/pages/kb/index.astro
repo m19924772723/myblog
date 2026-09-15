@@ -16,11 +16,21 @@ const all = (await getCollection("knowledge"))
 const counts = new Map<string, number>();
 all.forEach(e => counts.set(e.data.category, (counts.get(e.data.category) ?? 0) + 1));
 
-const BASE = import.meta.env.BASE_URL; // "/myblog/"
-function readTime(body: string): string {
-  const cjk = (body.match(/[\u4e00-\u9fff]/g) ?? []).length;
-  return `${Math.max(1, Math.round(cjk / 300))} 分钟`;
-}
+// 统计
+const tagSet = new Set<string>();
+let cjkTotal = 0;
+all.forEach(e => {
+  e.data.tags.forEach(t => tagSet.add(t));
+  cjkTotal += (e.body ?? "").match(/[\u4e00-\u9fff]/g)?.length ?? 0;
+});
+const tagCounts = new Map<string, number>();
+all.forEach(e => e.data.tags.forEach(t => tagCounts.set(t, (tagCounts.get(t) ?? 0) + 1)));
+const topTags = [...tagCounts.entries()].sort((a, b) => b[1] - a[1]);
+const readMinTotal = Math.max(1, Math.round(cjkTotal / 300));
+const recent = [...all].sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime()).slice(0, 5);
+
+const BASE = import.meta.env.BASE_URL;
+const fmt = (d: Date) => d.toISOString().slice(0, 10);
 ---
 
 <Layout
@@ -34,7 +44,8 @@ function readTime(body: string): string {
   <Main pageTitle="知识库 · Knowledge Base" class="app-prose">
     <section class="kb-hero">
       <p class="kb-sub">
-        编程 · 科研 · AI · 效率 · 学习 —— 速查手册与学习笔记，随用随查，随手沉淀。全站搜索可覆盖博客 / 工作台 / 导航 / 知识库四个系统。
+        编程 · 科研 · AI · 效率 · 学习 —— 速查手册与学习笔记，随用随查，随手沉淀。
+        <a href={`${BASE}kb/graph/`} style="color:var(--kb-accent);font-weight:600">🗺 查看知识图谱</a>
       </p>
       <input
         id="kb-search"
@@ -45,61 +56,66 @@ function readTime(body: string): string {
       />
     </section>
 
-    <div class="kb-cat-grid">
-      {KNOWLEDGE_CATEGORIES.map(c => (
-        <a
-          class="kb-cat-card"
-          href={`${BASE}kb/#cat-${c.id}`}
-          style={`--kb-cat-color:${c.color}`}
-        >
-          <span class="kb-cat-icon">{c.icon}</span>
-          <h3>{c.name}</h3>
-          <p>{c.description}</p>
-          <span class="kb-cat-count" style={`background:${c.color}`}>
-            {counts.get(c.id) ?? 0} 篇
-          </span>
-        </a>
-      ))}
+    <!-- 统计条（WeKnora 仪表盘感）-->
+    <div class="kb-stats">
+      <div class="kb-stat"><div class="kb-stat-num">{all.length}</div><div class="kb-stat-label">篇文章</div></div>
+      <div class="kb-stat"><div class="kb-stat-num">{KNOWLEDGE_CATEGORIES.length}</div><div class="kb-stat-label">个分类</div></div>
+      <div class="kb-stat"><div class="kb-stat-num">{tagSet.size}</div><div class="kb-stat-label">个标签</div></div>
+      <div class="kb-stat"><div class="kb-stat-num">{readMinTotal}</div><div class="kb-stat-label">分钟阅读量</div></div>
+      <div class="kb-stat"><div class="kb-stat-num">{recent.length}</div><div class="kb-stat-label">最近更新</div></div>
     </div>
 
-    <div class="kb-chips">
-      <button class="kb-chip active" data-cat="all" type="button">全部</button>
-      {KNOWLEDGE_CATEGORIES.map(c => (
-        <button class="kb-chip" data-cat={c.id} type="button">
-          {c.icon} {c.name}
-        </button>
+    <!-- MOC：分区导航表格 -->
+    <div class="kb-moc">
+      {KNOWLEDGE_CATEGORIES.map(cat => {
+        const items = all.filter(e => e.data.category === cat.id);
+        if (!items.length) return null;
+        return (
+          <section id={`cat-${cat.id}`}>
+            <h2 style="display:flex;align-items:center;gap:.5rem;font-size:1.15rem;margin-top:1.2rem">
+              <span style={`display:inline-flex;width:1.9rem;height:1.9rem;border-radius:.55rem;background:${cat.color};color:#fff;align-items:center;justify-content:center`}>
+                {cat.icon}
+              </span>
+              {cat.name}
+              <span style="color:var(--kb-muted);font-size:.8rem;font-weight:400">
+                {items.length} 篇
+              </span>
+            </h2>
+            <table class="kb-moc-table">
+              <thead>
+                <tr><th style="width:32%">文档</th><th>简介</th><th style="width:12%">更新</th></tr>
+              </thead>
+              <tbody>
+                {items.map(e => (
+                  <tr data-cat={cat.id} data-query={`${e.data.title} ${e.data.description} ${e.data.tags.join(" ")}`.toLowerCase()}>
+                    <td>
+                      <a href={`${BASE}kb/${e.id}/`}>{e.data.title}</a>
+                      <div style="font-size:.72rem;color:var(--kb-muted);margin-top:.15rem">
+                        {e.data.tags.slice(0, 2).map(t => `#${t}`).join(" ")}
+                      </div>
+                    </td>
+                    <td class="kb-moc-desc">{e.data.description}</td>
+                    <td style="color:var(--kb-muted);font-size:.75rem;white-space:nowrap">{fmt(e.data.pubDate)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </section>
+        );
+      })}
+    </div>
+
+    <!-- 标签云（点击筛选）-->
+    <h2 style="font-size:1.05rem;margin-top:1rem;text-align:center">🏷 标签云</h2>
+    <div class="kb-tagcloud" id="kb-tagcloud">
+      {topTags.map(([t, n]) => (
+        <button class="kb-tagc" data-tag={t} type="button">#{t} · {n}</button>
       ))}
     </div>
 
     <p class="kb-empty" id="kb-empty" style="display:none">
       没有匹配的文章，换个关键词试试
     </p>
-
-    <div class="kb-list" id="kb-list">
-      {all.map(e => (
-        <a
-          class="kb-item"
-          id={`kb-item-${e.id}`}
-          href={`${BASE}kb/${e.id}/`}
-          data-cat={e.data.category}
-          data-query={`${e.data.title} ${e.data.description} ${e.data.tags.join(" ")}`.toLowerCase()}
-          style={`--kb-item-color:${KNOWLEDGE_CATEGORIES.find(c => c.id === e.data.category)?.color ?? "#4d6bfe"}`}
-        >
-          <span class="kb-item-cat">
-            {KNOWLEDGE_CATEGORIES.find(c => c.id === e.data.category)?.icon}
-          </span>
-          <div>
-            <h4>{e.data.title}</h4>
-            <p>{e.data.description}</p>
-          </div>
-          <span class="kb-item-meta">
-            {readTime(e.body ?? "")} 阅读
-            <br />
-            {new Date(e.data.pubDate).toISOString().slice(0, 10)}
-          </span>
-        </a>
-      ))}
-    </div>
 
     <div class="kb-cross">
       🔗 与本站其它系统互通：
@@ -114,20 +130,27 @@ function readTime(body: string): string {
 </Layout>
 
 <script>
-  const list = document.getElementById("kb-list")!;
+  const rows = document.querySelectorAll<HTMLElement>(".kb-moc-table tbody tr");
   const empty = document.getElementById("kb-empty")!;
   const search = document.getElementById("kb-search") as HTMLInputElement;
+  const sections = document.querySelectorAll<HTMLElement>(".kb-moc > section");
   let cat = "all";
   let query = "";
+  let tag = "";
 
   function apply() {
     let visible = 0;
-    list.querySelectorAll<HTMLElement>(".kb-item").forEach(item => {
-      const okCat = cat === "all" || item.dataset.cat === cat;
-      const okQuery = !query || (item.dataset.query ?? "").includes(query);
-      const ok = okCat && okQuery;
-      item.classList.toggle("kb-hidden", !ok);
+    rows.forEach(row => {
+      const okCat = cat === "all" || row.dataset.cat === cat;
+      const okQuery = !query || (row.dataset.query ?? "").includes(query);
+      const okTag = !tag || (row.dataset.query ?? "").includes(tag);
+      const ok = okCat && okQuery && okTag;
+      row.classList.toggle("kb-hidden", !ok);
       if (ok) visible++;
+    });
+    sections.forEach(sec => {
+      const any = sec.querySelectorAll("tr:not(.kb-hidden)").length > 0;
+      sec.classList.toggle("kb-hidden", !any);
     });
     empty.style.display = visible ? "none" : "block";
   }
@@ -137,21 +160,20 @@ function readTime(body: string): string {
     apply();
   });
 
-  document.querySelectorAll<HTMLElement>(".kb-chip").forEach(chip => {
-    chip.addEventListener("click", () => {
-      cat = chip.dataset.cat ?? "all";
-      document.querySelectorAll(".kb-chip").forEach(c =>
-        c.classList.toggle("active", c === chip),
-      );
+  // 标签云筛选（再点取消）
+  document.querySelectorAll<HTMLElement>(".kb-tagc").forEach(tc => {
+    tc.addEventListener("click", () => {
+      const t = tc.dataset.tag ?? "";
+      tag = tc.classList.contains("active") ? "" : t;
+      tc.classList.toggle("active", !!tag);
       apply();
     });
   });
 
-  // 支持 /kb/#cat-xxx 锚点直达分类
   const m = location.hash.match(/^#cat-(.+)$/);
   if (m) {
-    const target = document.querySelector(`.kb-chip[data-cat="${m[1]}"]`) as HTMLElement | null;
-    target?.click();
+    const sec = document.getElementById(`cat-${m[1]}`);
+    sec?.scrollIntoView({ behavior: "smooth" });
   }
   apply();
 </script>

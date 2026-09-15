@@ -329,3 +329,204 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* ---- WeKnora 风格增强：统计条 / MOC 表格 / 标签云 / 关联文档 ---- */
+.kb-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.7rem;
+  margin: 1.2rem 0 1.6rem;
+}
+.kb-stat {
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--kb-border);
+  border-radius: 0.85rem;
+  background: var(--kb-card);
+  text-align: center;
+}
+.kb-stat .kb-stat-num {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--kb-accent);
+  line-height: 1.2;
+}
+.kb-stat .kb-stat-label {
+  font-size: 0.78rem;
+  color: var(--kb-muted);
+}
+
+.kb-moc {
+  margin-top: 1rem;
+}
+.kb-moc-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  margin: 0.5rem 0 1.4rem;
+}
+.kb-moc-table th {
+  text-align: left;
+  color: var(--kb-muted);
+  font-weight: 600;
+  font-size: 0.8rem;
+  padding: 0.35rem 0.6rem;
+  border-bottom: 1px solid var(--kb-border);
+}
+.kb-moc-table td {
+  padding: 0.5rem 0.6rem;
+  border-bottom: 1px solid var(--kb-border);
+  vertical-align: top;
+}
+.kb-moc-table tr:hover td {
+  background: var(--kb-chip-bg);
+}
+.kb-moc-table a {
+  color: var(--kb-text);
+  font-weight: 600;
+  text-decoration: none;
+}
+.kb-moc-table a:hover {
+  color: var(--kb-accent);
+  text-decoration: underline;
+}
+.kb-moc-table .kb-moc-desc {
+  color: var(--kb-muted);
+  font-size: 0.8rem;
+}
+
+.kb-tagcloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  justify-content: center;
+  margin: 1rem 0 1.4rem;
+}
+.kb-tagcloud .kb-tagc {
+  padding: 0.25rem 0.7rem;
+  border-radius: 9999px;
+  border: 1px solid var(--kb-border);
+  background: var(--kb-chip-bg);
+  color: var(--kb-muted);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.kb-tagcloud .kb-tagc.active {
+  background: var(--kb-accent);
+  border-color: var(--kb-accent);
+  color: #fff;
+  font-weight: 600;
+}
+.kb-tagcloud .kb-tagc:hover {
+  color: var(--kb-text);
+}
+
+.kb-related {
+  margin-top: 2.5rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--kb-border);
+}
+.kb-related h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+}
+.kb-related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.6rem;
+}
+.kb-related-card {
+  display: block;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid var(--kb-border);
+  border-radius: 0.8rem;
+  background: var(--kb-card);
+  text-decoration: none;
+  color: var(--kb-text);
+  transition: border-color 0.15s, transform 0.15s;
+}
+.kb-related-card:hover {
+  border-color: var(--kb-accent);
+  transform: translateY(-2px);
+}
+.kb-related-card .kb-rc-title {
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+.kb-related-card .kb-rc-meta {
+  color: var(--kb-muted);
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+.kb-edit-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.8rem;
+  color: var(--kb-muted);
+  text-decoration: none;
+  border: 1px solid var(--kb-border);
+  border-radius: 0.6rem;
+  padding: 0.25rem 0.7rem;
+  margin-left: 0.5rem;
+  transition: all 0.15s;
+}
+.kb-edit-link:hover {
+  color: var(--kb-accent);
+  border-color: var(--kb-accent);
+}
+
+/* ---- 知识图谱页 ---- */
+.kb-graph-wrap {
+  position: relative;
+  margin-top: 1rem;
+}
+#kb-graph {
+  width: 100%;
+  height: 560px;
+  border: 1px solid var(--kb-border);
+  border-radius: 1rem;
+  background: var(--kb-card);
+  display: block;
+  cursor: grab;
+}
+#kb-graph:active {
+  cursor: grabbing;
+}
+.kb-graph-tip {
+  position: absolute;
+  pointer-events: none;
+  background: var(--kb-text);
+  color: var(--kb-bg);
+  font-size: 0.75rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.15s;
+  z-index: 10;
+  max-width: 220px;
+}
+.kb-graph-tip.show {
+  opacity: 0.95;
+}
+.kb-graph-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: center;
+  font-size: 0.78rem;
+  color: var(--kb-muted);
+  margin-top: 0.8rem;
+}
+.kb-graph-legend .lg-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+.kb-graph-legend .lg-dot {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  display: inline-block;
+}
