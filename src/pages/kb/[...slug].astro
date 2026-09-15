@@ -1,0 +1,139 @@
+---
+import { getCollection, render } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import Main from "@/components/Main.astro";
+import Footer from "@/components/Footer.astro";
+import config from "@/config";
+import { KNOWLEDGE_CATEGORIES } from "@/content.config";
+import "@/styles/kb.css";
+
+export async function getStaticPaths() {
+  const all = (await getCollection("knowledge"))
+    .filter(e => !e.data.draft)
+    .sort((a, b) => {
+      const ca = KNOWLEDGE_CATEGORIES.findIndex(c => c.id === a.data.category);
+      const cb = KNOWLEDGE_CATEGORIES.findIndex(c => c.id === b.data.category);
+      if (ca !== cb) return ca - cb;
+      return (a.data.order ?? 99) - (b.data.order ?? 99) || a.data.title.localeCompare(b.data.title, "zh");
+    });
+  return all.map((entry, i) => ({
+    params: { slug: entry.id },
+    props: {
+      entry,
+      prev: i > 0 ? all[i - 1] : null,
+      next: i < all.length - 1 ? all[i + 1] : null,
+    },
+  }));
+}
+
+const { entry, prev, next } = Astro.props;
+const all = (await getCollection("knowledge"))
+  .filter(e => !e.data.draft)
+  .sort((a, b) => {
+    const ca = KNOWLEDGE_CATEGORIES.findIndex(c => c.id === a.data.category);
+    const cb = KNOWLEDGE_CATEGORIES.findIndex(c => c.id === b.data.category);
+    if (ca !== cb) return ca - cb;
+    return (a.data.order ?? 99) - (b.data.order ?? 99) || a.data.title.localeCompare(b.data.title, "zh");
+  });
+const { Content } = await render(entry);
+const catInfo = KNOWLEDGE_CATEGORIES.find(c => c.id === entry.data.category)!;
+const BASE = import.meta.env.BASE_URL;
+
+const cjkCount = ((entry.body ?? "").match(/[\u4e00-\u9fff]/g) ?? []).length;
+const readMin = Math.max(1, Math.round(cjkCount / 300));
+const fmt = (d: Date) => d.toISOString().slice(0, 10);
+
+const grouped = KNOWLEDGE_CATEGORIES.map(c => ({
+  cat: c,
+  items: all.filter(e => e.data.category === c.id),
+})).filter(g => g.items.length > 0);
+---
+
+<Layout
+  title={`${entry.data.title} | 知识库 | ${config.site.title}`}
+  description={entry.data.description}
+>
+  <Header />
+
+  <Breadcrumb />
+
+  <Main pageTitle={entry.data.title} class="app-prose">
+    <div class="kb-layout">
+      <aside class="kb-sidebar">
+        {grouped.map(g => (
+          <div class="kb-sb-group">
+            <h4>
+              {g.cat.icon} {g.cat.name}
+            </h4>
+            {g.items.map(it => (
+              <a
+                class:list={[
+                  "kb-sb-link",
+                  { active: it.id === entry.id },
+                ]}
+                href={`${BASE}kb/${it.id}/`}
+              >
+                {it.data.title}
+              </a>
+            ))}
+          </div>
+        ))}
+        <div class="kb-sb-cross">
+          <a href={`${BASE}`}>博客</a>
+          <a href={`${BASE}workbench/`}>工作台</a>
+          <a href={`${BASE}nav/`}>导航</a>
+          <a href={`${BASE}kb/`}>知识库首页</a>
+        </div>
+      </aside>
+
+      <article class="kb-article">
+        <div class="kb-meta">
+          <span class="kb-badge" style={`background:${catInfo.color}`}>
+            {catInfo.icon} {catInfo.name}
+          </span>
+          <span>📅 {fmt(entry.data.pubDate)}</span>
+          {entry.data.updatedDate && (
+            <span>🔄 更新于 {fmt(entry.data.updatedDate)}</span>
+          )}
+          <span>⏱ {readMin} 分钟阅读</span>
+          {entry.data.tags.map(t => (
+            <span class="kb-tag">#{t}</span>
+          ))}
+        </div>
+
+        <Content />
+
+        <div class="kb-prevnext">
+          {prev ? (
+            <a class="kb-pn-card" href={`${BASE}kb/${prev.id}/`}>
+              <div class="kb-pn-dir">← 上一篇</div>
+              <div class="kb-pn-title">{prev.data.title}</div>
+            </a>
+          ) : (
+            <span></span>
+          )}
+          {next ? (
+            <a class="kb-pn-card next" href={`${BASE}kb/${next.id}/`}>
+              <div class="kb-pn-dir">下一篇 →</div>
+              <div class="kb-pn-title">{next.data.title}</div>
+            </a>
+          ) : (
+            <span></span>
+          )}
+        </div>
+
+        <div class="kb-cross">
+          🔗 与本站其它系统互通：
+          <a href={`${BASE}workbench/`}>工作台</a> ·
+          <a href={`${BASE}nav/`}>万象导航</a> ·
+          <a href={`${BASE}search/`}>全局搜索</a> ·
+          <a href={`${BASE}about/`}>关于</a>
+        </div>
+      </article>
+    </div>
+  </Main>
+
+  <Footer />
+</Layout>

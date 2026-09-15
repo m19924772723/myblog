@@ -43,4 +43,65 @@ const workbench = defineCollection({
   }),
 });
 
-export const collections = { posts, pages, workbench };
+// ===== 知识库 =====
+// 四系统之一：编程 / 科研 / AI / 效率 / 学习 五大类学习笔记
+export const KNOWLEDGE_PATH = "src/content/knowledge";
+export const KNOWLEDGE_CATEGORIES = [
+  {
+    id: "programming",
+    name: "编程",
+    icon: "💻",
+    color: "#4d6bfe",
+    description: "Python、Git、编辑器与开发效率速查",
+  },
+  {
+    id: "research",
+    name: "科研",
+    icon: "🔬",
+    color: "#7c3aed",
+    description: "论文写作、LaTeX 与科研工作流",
+  },
+  {
+    id: "ai",
+    name: "AI",
+    icon: "🤖",
+    color: "#0ea5e9",
+    description: "提示词工程、大模型 API 应用指南",
+  },
+  {
+    id: "productivity",
+    name: "效率",
+    icon: "⚡",
+    color: "#f59e0b",
+    description: "环境配置、命令行与日常效率工具",
+  },
+  {
+    id: "learning",
+    name: "学习",
+    icon: "📚",
+    color: "#10b981",
+    description: "学习方法论与知识管理体系",
+  },
+] as const;
+
+const knowledge = defineCollection({
+  loader: glob({ pattern: "**/[^_]*.{md,mdx}", base: `./${KNOWLEDGE_PATH}` }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    category: z.enum([
+      "programming",
+      "research",
+      "ai",
+      "productivity",
+      "learning",
+    ]),
+    tags: z.array(z.string()).default([]),
+    pubDate: z.date(),
+    updatedDate: z.date().optional(),
+    order: z.number().default(99),
+    draft: z.boolean().optional(),
+  }),
+});
+
+export const collections = { posts, pages, workbench, knowledge };

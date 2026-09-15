@@ -1,0 +1,157 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import Main from "@/components/Main.astro";
+import Footer from "@/components/Footer.astro";
+import config from "@/config";
+import { getCollection } from "astro:content";
+import { KNOWLEDGE_CATEGORIES } from "@/content.config";
+import "@/styles/kb.css";
+
+const all = (await getCollection("knowledge"))
+  .filter(e => !e.data.draft)
+  .sort((a, b) => (a.data.order ?? 99) - (b.data.order ?? 99) || a.data.title.localeCompare(b.data.title, "zh"));
+
+const counts = new Map<string, number>();
+all.forEach(e => counts.set(e.data.category, (counts.get(e.data.category) ?? 0) + 1));
+
+const BASE = import.meta.env.BASE_URL; // "/myblog/"
+function readTime(body: string): string {
+  const cjk = (body.match(/[\u4e00-\u9fff]/g) ?? []).length;
+  return `${Math.max(1, Math.round(cjk / 300))} 分钟`;
+}
+---
+
+<Layout
+  title={`知识库 | ${config.site.title}`}
+  description="个人知识库：编程、科研、AI、效率、学习五大类速查手册与学习笔记"
+>
+  <Header />
+
+  <Breadcrumb />
+
+  <Main pageTitle="知识库 · Knowledge Base" class="app-prose">
+    <section class="kb-hero">
+      <p class="kb-sub">
+        编程 · 科研 · AI · 效率 · 学习 —— 速查手册与学习笔记，随用随查，随手沉淀。全站搜索可覆盖博客 / 工作台 / 导航 / 知识库四个系统。
+      </p>
+      <input
+        id="kb-search"
+        class="kb-search"
+        type="search"
+        placeholder="在知识库里搜：Git、Python、论文、提示词…"
+        autocomplete="off"
+      />
+    </section>
+
+    <div class="kb-cat-grid">
+      {KNOWLEDGE_CATEGORIES.map(c => (
+        <a
+          class="kb-cat-card"
+          href={`${BASE}kb/#cat-${c.id}`}
+          style={`--kb-cat-color:${c.color}`}
+        >
+          <span class="kb-cat-icon">{c.icon}</span>
+          <h3>{c.name}</h3>
+          <p>{c.description}</p>
+          <span class="kb-cat-count" style={`background:${c.color}`}>
+            {counts.get(c.id) ?? 0} 篇
+          </span>
+        </a>
+      ))}
+    </div>
+
+    <div class="kb-chips">
+      <button class="kb-chip active" data-cat="all" type="button">全部</button>
+      {KNOWLEDGE_CATEGORIES.map(c => (
+        <button class="kb-chip" data-cat={c.id} type="button">
+          {c.icon} {c.name}
+        </button>
+      ))}
+    </div>
+
+    <p class="kb-empty" id="kb-empty" style="display:none">
+      没有匹配的文章，换个关键词试试
+    </p>
+
+    <div class="kb-list" id="kb-list">
+      {all.map(e => (
+        <a
+          class="kb-item"
+          id={`kb-item-${e.id}`}
+          href={`${BASE}kb/${e.id}/`}
+          data-cat={e.data.category}
+          data-query={`${e.data.title} ${e.data.description} ${e.data.tags.join(" ")}`.toLowerCase()}
+          style={`--kb-item-color:${KNOWLEDGE_CATEGORIES.find(c => c.id === e.data.category)?.color ?? "#4d6bfe"}`}
+        >
+          <span class="kb-item-cat">
+            {KNOWLEDGE_CATEGORIES.find(c => c.id === e.data.category)?.icon}
+          </span>
+          <div>
+            <h4>{e.data.title}</h4>
+            <p>{e.data.description}</p>
+          </div>
+          <span class="kb-item-meta">
+            {readTime(e.body ?? "")} 阅读
+            <br />
+            {new Date(e.data.pubDate).toISOString().slice(0, 10)}
+          </span>
+        </a>
+      ))}
+    </div>
+
+    <div class="kb-cross">
+      🔗 与本站其它系统互通：
+      <a href={`${BASE}workbench/`}>工作台</a> ·
+      <a href={`${BASE}nav/`}>万象导航</a> ·
+      <a href={`${BASE}search/`}>全局搜索</a> ·
+      <a href={`${BASE}about/`}>关于</a>
+    </div>
+  </Main>
+
+  <Footer />
+</Layout>
+
+<script>
+  const list = document.getElementById("kb-list")!;
+  const empty = document.getElementById("kb-empty")!;
+  const search = document.getElementById("kb-search") as HTMLInputElement;
+  let cat = "all";
+  let query = "";
+
+  function apply() {
+    let visible = 0;
+    list.querySelectorAll<HTMLElement>(".kb-item").forEach(item => {
+      const okCat = cat === "all" || item.dataset.cat === cat;
+      const okQuery = !query || (item.dataset.query ?? "").includes(query);
+      const ok = okCat && okQuery;
+      item.classList.toggle("kb-hidden", !ok);
+      if (ok) visible++;
+    });
+    empty.style.display = visible ? "none" : "block";
+  }
+
+  search.addEventListener("input", () => {
+    query = search.value.trim().toLowerCase();
+    apply();
+  });
+
+  document.querySelectorAll<HTMLElement>(".kb-chip").forEach(chip => {
+    chip.addEventListener("click", () => {
+      cat = chip.dataset.cat ?? "all";
+      document.querySelectorAll(".kb-chip").forEach(c =>
+        c.classList.toggle("active", c === chip),
+      );
+      apply();
+    });
+  });
+
+  // 支持 /kb/#cat-xxx 锚点直达分类
+  const m = location.hash.match(/^#cat-(.+)$/);
+  if (m) {
+    const target = document.querySelector(`.kb-chip[data-cat="${m[1]}"]`) as HTMLElement | null;
+    target?.click();
+  }
+  apply();
+</script>
