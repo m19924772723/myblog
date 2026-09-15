@@ -1,0 +1,142 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import Main from "@/components/Main.astro";
+import Footer from "@/components/Footer.astro";
+import config from "@/config";
+import "@/styles/kb.css";
+import data from "@/data/skills.json";
+
+const { total, bySource, categories, skills, generatedAt } = data;
+const BASE = import.meta.env.BASE_URL.replace(/\/+$/, "") + "/";
+
+const SRC_LABEL: Record<string, string> = { builtin: "内置", hub: "Hub", local: "本地" };
+const SRC_COLOR: Record<string, string> = { builtin: "#6b7280", hub: "#4d6bfe", local: "#10b981" };
+---
+
+<Layout
+  title={`技能库 | ${config.site.title}`}
+  description={`Hermes 技能库：${total} 个技能，${categories.length} 个分类，自动同步`}
+>
+  <Header />
+
+  <Breadcrumb />
+
+  <Main pageTitle="技能库 · Skills" class="app-prose">
+    <section class="kb-hero">
+      <p class="kb-sub">
+        Hermes 已安装的 {total} 个技能 · {categories.length} 个分类 ·
+        每日工作台管线自动同步（生成于 {generatedAt}）
+      </p>
+      <input
+        id="sk-search"
+        class="kb-search"
+        type="search"
+        placeholder="搜技能：scrapling、github、论文、写作…"
+        autocomplete="off"
+      />
+    </section>
+
+    <div class="kb-stats">
+      <div class="kb-stat"><div class="kb-stat-num">{total}</div><div class="kb-stat-label">个技能</div></div>
+      <div class="kb-stat"><div class="kb-stat-num">{categories.length}</div><div class="kb-stat-label">个分类</div></div>
+      <div class="kb-stat"><div class="kb-stat-num">{bySource.builtin}</div><div class="kb-stat-label">内置</div></div>
+      <div class="kb-stat"><div class="kb-stat-num">{bySource.hub}</div><div class="kb-stat-label">Hub 安装</div></div>
+      <div class="kb-stat"><div class="kb-stat-num">{bySource.local}</div><div class="kb-stat-label">本地</div></div>
+    </div>
+
+    <div class="kb-chips" id="sk-chips">
+      <button class="kb-chip active" data-src="all" type="button">全部</button>
+      <button class="kb-chip" data-src="builtin" type="button">内置</button>
+      <button class="kb-chip" data-src="hub" type="button">Hub</button>
+      <button class="kb-chip" data-src="local" type="button">本地</button>
+    </div>
+
+    <p class="kb-empty" id="sk-empty" style="display:none">没有匹配的技能，换个关键词试试</p>
+
+    {categories.map(cat => {
+      const items = skills.filter(s => s.category === cat.id);
+      return (
+        <section id={`cat-${cat.id}`} class="sk-section">
+          <h2 style="display:flex;align-items:center;gap:.5rem;font-size:1.1rem;margin-top:1.4rem">
+            <span style={`display:inline-flex;width:1.9rem;height:1.9rem;border-radius:.55rem;background:#4d6bfe;color:#fff;align-items:center;justify-content:center`}>
+              {cat.icon}
+            </span>
+            {cat.id}
+            <span style="color:var(--kb-muted);font-size:.78rem;font-weight:400">{cat.count} 个</span>
+          </h2>
+          <div class="sk-list">
+            {items.map(s => (
+              <div class="sk-item" data-src={s.source}
+                data-query={`${s.name} ${s.description} ${s.category}`.toLowerCase()}>
+                <span class="sk-src" style={`background:${SRC_COLOR[s.source]}`}>{SRC_LABEL[s.source]}</span>
+                <div class="sk-body">
+                  <span class="sk-name">{s.name}</span>
+                  <span class="sk-desc">{s.description || "—"}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      );
+    })}
+
+    <div class="kb-cross">
+      🔗 与本站其它系统互通：
+      <a href={`${BASE}workbench/`}>工作台</a> ·
+      <a href={`${BASE}kb/`}>知识库</a> ·
+      <a href={`${BASE}nav/`}>万象导航</a> ·
+      <a href={`${BASE}search/`}>全局搜索</a>
+    </div>
+  </Main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .sk-list { display: flex; flex-direction: column; gap: .45rem; margin-top: .6rem; }
+  .sk-item { display: flex; gap: .7rem; align-items: baseline; padding: .55rem .8rem;
+    border: 1px solid var(--kb-border); border-radius: .7rem; background: var(--kb-card); }
+  .sk-src { flex: 0 0 auto; font-size: .68rem; color: #fff; border-radius: .4rem; padding: .12rem .5rem; }
+  .sk-body { display: flex; flex-direction: column; min-width: 0; }
+  .sk-name { font-weight: 650; font-size: .92rem; color: var(--kb-text); }
+  .sk-desc { font-size: .78rem; color: var(--kb-muted); margin-top: .1rem;
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .sk-hidden { display: none !important; }
+  @media (max-width: 640px) { .sk-desc { white-space: normal; } }
+</style>
+
+<script>
+  const items = document.querySelectorAll<HTMLElement>(".sk-item");
+  const sections = document.querySelectorAll<HTMLElement>(".sk-section");
+  const empty = document.getElementById("sk-empty")!;
+  const search = document.getElementById("sk-search") as HTMLInputElement;
+  let src = "all";
+  let query = "";
+
+  function apply() {
+    let visible = 0;
+    items.forEach(it => {
+      const okSrc = src === "all" || it.dataset.src === src;
+      const okQ = !query || (it.dataset.query ?? "").includes(query);
+      const ok = okSrc && okQ;
+      it.classList.toggle("sk-hidden", !ok);
+      if (ok) visible++;
+    });
+    sections.forEach(sec => {
+      sec.classList.toggle("sk-hidden", sec.querySelectorAll(".sk-item:not(.sk-hidden)").length === 0);
+    });
+    empty.style.display = visible ? "none" : "block";
+  }
+
+  search.addEventListener("input", () => { query = search.value.trim().toLowerCase(); apply(); });
+  document.querySelectorAll<HTMLElement>("#sk-chips .kb-chip").forEach(ch => {
+    ch.addEventListener("click", () => {
+      src = ch.dataset.src ?? "all";
+      document.querySelectorAll("#sk-chips .kb-chip").forEach(c => c.classList.toggle("active", c === ch));
+      apply();
+    });
+  });
+  apply();
+</script>

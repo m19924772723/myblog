@@ -6,6 +6,9 @@ import Breadcrumb from "@/components/Breadcrumb.astro";
 import Main from "@/components/Main.astro";
 import Footer from "@/components/Footer.astro";
 import config from "@/config";
+import skillsData from "@/data/skills.json";
+
+const total = skillsData.total;
 
 const entries = await getCollection("workbench");
 const todo = entries.find(e => e.data.type === "todo");
@@ -73,6 +76,12 @@ const { Content: TodoContent } = todo ? await render(todo) : { Content: null };
         收录编程、科研、AI、效率、学习五大类速查手册；右上角
         <a href={`${import.meta.env.BASE_URL.replace(/\/+$/, "")}/search/`} class="hover:text-accent underline">全局搜索</a>
         可跨四个系统一站式检索。
+      </div>
+
+      <div class="mt-4 rounded-lg border border-dashed border-border p-4 text-sm">
+        <strong>技能库：</strong>
+        <a href={`${import.meta.env.BASE_URL.replace(/\/+$/, "")}/skills/`} class="hover:text-accent underline">Hermes 技能库（/skills）</a>
+        —— {total} 个技能按分类实时同步，每日管线自动刷新。
       </div>
     </div>
   </Main>
