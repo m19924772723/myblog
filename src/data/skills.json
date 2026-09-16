@@ -1,15 +1,15 @@
 {
- "generatedAt": "2026-09-16 00:35",
- "total": 163,
+ "generatedAt": "2026-09-16 17:07",
+ "total": 166,
  "bySource": {
   "builtin": 58,
   "hub": 6,
-  "local": 99
+  "local": 102
  },
  "categories": [
   {
    "id": "software-development",
-   "count": 49,
+   "count": 52,
    "icon": "💻"
   },
   {
@@ -466,6 +466,12 @@
    "description": "Astro blog on GitHub Pages: theme customize, CMS, deploy."
   },
   {
+   "name": "astro-paper-blog",
+   "category": "software-development",
+   "source": "local",
+   "description": "Use when building or fixing the astro-paper blog (myblog)."
+  },
+  {
    "name": "brainstorming",
    "category": "software-development",
    "source": "hub",
@@ -514,6 +520,12 @@
    "description": "GitHub account automation: SSH 443, gh CLI, repos, Pages."
   },
   {
+   "name": "github-account-migration",
+   "category": "software-development",
+   "source": "local",
+   "description": "Use when migrating GitHub/Gitee/AtomGit accounts."
+  },
+  {
    "name": "github-daily-automation",
    "category": "software-development",
    "source": "local",
@@ -524,6 +536,12 @@
    "category": "software-development",
    "source": "local",
    "description": "Daily GitHub log: journal, auto push, profile README."
+  },
+  {
+   "name": "github-mirror-gitee-atomgit",
+   "category": "software-development",
+   "source": "local",
+   "description": "Use when mirroring GitHub repos to Gitee and AtomGit."
   },
   {
    "name": "github-resource-curation",
