@@ -69,11 +69,15 @@ const SRC_COLOR: Record<string, string> = { builtin: "#6b7280", hub: "#4d6bfe", 
           <div class="sk-list">
             {items.map(s => (
               <div class="sk-item" data-src={s.source}
-                data-query={`${s.name} ${s.description} ${s.category}`.toLowerCase()}>
+                data-query={`${s.name} ${s.description} ${s.category} ${s.usage}`.toLowerCase()}>
                 <span class="sk-src" style={`background:${SRC_COLOR[s.source]}`}>{SRC_LABEL[s.source]}</span>
                 <div class="sk-body">
-                  <span class="sk-name">{s.name}</span>
+                  <span class="sk-name">
+                    {s.name}
+                    {s.suite && <span class="sk-suite">{s.suite}</span>}
+                  </span>
                   <span class="sk-desc">{s.description || "—"}</span>
+                  <span class="sk-usage">💡 {s.usage || "有相关需求时直接说"}</span>
                 </div>
               </div>
             ))}
@@ -101,8 +105,12 @@ const SRC_COLOR: Record<string, string> = { builtin: "#6b7280", hub: "#4d6bfe", 
   .sk-src { flex: 0 0 auto; font-size: .68rem; color: #fff; border-radius: .4rem; padding: .12rem .5rem; }
   .sk-body { display: flex; flex-direction: column; min-width: 0; }
   .sk-name { font-weight: 650; font-size: .92rem; color: var(--kb-text); }
+  .sk-suite { display: inline-block; margin-left: .5rem; font-size: .66rem; font-weight: 500;
+    color: #4d6bfe; background: rgba(77,107,254,.1); border: 1px solid rgba(77,107,254,.25);
+    border-radius: .4rem; padding: .06rem .45rem; vertical-align: middle; }
   .sk-desc { font-size: .78rem; color: var(--kb-muted); margin-top: .1rem;
     overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .sk-usage { font-size: .74rem; color: #10b981; margin-top: .25rem; }
   .sk-hidden { display: none !important; }
   @media (max-width: 640px) { .sk-desc { white-space: normal; } }
 </style>

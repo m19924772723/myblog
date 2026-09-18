@@ -1,70 +1,70 @@
 {
- "generatedAt": "2026-09-18 12:06",
- "total": 192,
+ "generatedAt": "2026-09-18 13:26",
+ "total": 167,
  "bySource": {
-  "builtin": 58,
+  "builtin": 0,
   "hub": 6,
-  "local": 128
+  "local": 161
  },
  "categories": [
   {
    "id": "software-development",
-   "count": 78,
+   "count": 76,
    "icon": "💻"
   },
   {
-   "id": "productivity",
-   "count": 31,
-   "icon": "⚡"
-  },
-  {
-   "id": "creative",
-   "count": 27,
-   "icon": "🎨"
-  },
-  {
    "id": "research",
-   "count": 16,
+   "count": 35,
    "icon": "🔬"
   },
   {
+   "id": "creative",
+   "count": 17,
+   "icon": "🎨"
+  },
+  {
+   "id": "productivity",
+   "count": 17,
+   "icon": "⚡"
+  },
+  {
    "id": "autonomous-ai-agents",
-   "count": 12,
+   "count": 7,
    "icon": "🤖"
   },
   {
    "id": "apple",
-   "count": 8,
+   "count": 4,
    "icon": ""
   },
   {
    "id": "media",
-   "count": 6,
+   "count": 3,
    "icon": "🎬"
   },
   {
-   "id": "email",
-   "count": 4,
-   "icon": "📧"
-  },
-  {
    "id": "web",
-   "count": 4,
+   "count": 3,
    "icon": "🌐"
   },
   {
-   "id": "devops",
+   "id": "email",
    "count": 2,
+   "icon": "📧"
+  },
+  {
+   "id": "devops",
+   "count": 1,
    "icon": "🛠"
   },
   {
    "id": "note-taking",
-   "count": 2,
+   "count": 1,
    "icon": "📝"
   },
   {
    "id": "social-media",
-   "count": 2,
+   "count": 1,
    "icon": "📣"
   }
  ],
@@ -73,1153 +73,1337 @@
    "name": "apple-notes",
    "category": "apple",
    "source": "local",
-   "description": "Manage Apple Notes via memo CLI: create, search, edit."
+   "description": "Manage Apple Notes via memo CLI: create, search, edit.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "apple-reminders",
    "category": "apple",
    "source": "local",
-   "description": "Apple Reminders via remindctl: add, list, complete."
+   "description": "Apple Reminders via remindctl: add, list, complete.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "findmy",
    "category": "apple",
    "source": "local",
-   "description": "Track Apple devices/AirTags via FindMy.app on macOS."
+   "description": "Track Apple devices/AirTags via FindMy.app on macOS.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "imessage",
    "category": "apple",
    "source": "local",
-   "description": "Send and receive iMessages/SMS via the imsg CLI on macOS."
+   "description": "Send and receive iMessages/SMS via the imsg CLI on macOS.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "claude-code",
    "category": "autonomous-ai-agents",
    "source": "local",
-   "description": "Delegate coding to Claude Code CLI (features, PRs)."
+   "description": "Delegate coding to Claude Code CLI (features, PRs).",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "codex",
    "category": "autonomous-ai-agents",
    "source": "local",
-   "description": "Delegate coding to OpenAI Codex CLI (features, PRs)."
+   "description": "Delegate coding to OpenAI Codex CLI (features, PRs).",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "computer-use",
    "category": "autonomous-ai-agents",
    "source": "local",
-   "description": "Drive the desktop background-first; escalate on signal."
+   "description": "Drive the desktop background-first; escalate on signal.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "hermes-agent",
    "category": "autonomous-ai-agents",
    "source": "local",
-   "description": "Use, configure, theme, extend, and orchestrate Hermes Agent."
+   "description": "Use, configure, theme, extend, and orchestrate Hermes Agent.",
+   "usage": "问 Hermes 配置/用法时自动加载",
+   "suite": ""
   },
   {
    "name": "hermes-skill-install",
    "category": "autonomous-ai-agents",
    "source": "local",
-   "description": "Use when installing Hermes skills from hub/GitHub."
+   "description": "Use when installing Hermes skills from hub/GitHub.",
+   "usage": "触发词：「installing hermes skills from hub/github」相关的需求",
+   "suite": ""
   },
   {
    "name": "opencode",
    "category": "autonomous-ai-agents",
    "source": "local",
-   "description": "Delegate coding to OpenCode CLI (features, PR review)."
+   "description": "Delegate coding to OpenCode CLI (features, PR review).",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "xianyu-autoagent-deploy",
    "category": "autonomous-ai-agents",
    "source": "local",
-   "description": "Deploy/run the Xianyu AI customer-service agent."
+   "description": "Deploy/run the Xianyu AI customer-service agent.",
+   "usage": "闲鱼客服系统：改议价策略/重部署",
+   "suite": ""
   },
   {
    "name": "architecture-diagram",
    "category": "creative",
    "source": "local",
-   "description": "Dark-themed SVG architecture/cloud/infra diagrams as HTML."
+   "description": "Dark-themed SVG architecture/cloud/infra diagrams as HTML.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "ascii-video",
    "category": "creative",
    "source": "local",
-   "description": "ASCII video: convert video/audio to colored ASCII MP4/GIF."
+   "description": "ASCII video: convert video/audio to colored ASCII MP4/GIF.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "baoyu-infographic",
    "category": "creative",
    "source": "local",
-   "description": "Infographics: 21 layouts x 21 styles (信息图, 可视化)."
+   "description": "Infographics: 21 layouts x 21 styles (信息图, 可视化).",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "claude-design",
    "category": "creative",
    "source": "local",
-   "description": "Design one-off HTML artifacts (landing, deck, prototype)."
+   "description": "Design one-off HTML artifacts (landing, deck, prototype).",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "design-md",
    "category": "creative",
    "source": "local",
-   "description": "Author/validate/export Google's DESIGN.md token spec files."
+   "description": "Author/validate/export Google's DESIGN.md token spec files.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "humanizer",
    "category": "creative",
    "source": "local",
-   "description": "Humanize text: strip AI-isms and add real voice."
+   "description": "Humanize text: strip AI-isms and add real voice.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "landing",
    "category": "creative",
    "source": "local",
-   "description": "Generates a premium single-page HTML landing page with 3D CSS animations, GSAP scroll effects, and mouse-parallax depth. Forcing intake (product + elevator pitc"
+   "description": "Generates a premium single-page HTML landing page with 3D CSS animations, GSAP scroll effects, and mouse-parallax depth. Forcing intake (product + elevator pitc",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "linkedin-analytics",
    "category": "creative",
    "source": "local",
-   "description": "Use when someone wants to understand their own LinkedIn numbers — which posts worked, why reach dropped, whether a pattern is real, or how to test a hypothesis."
+   "description": "Use when someone wants to understand their own LinkedIn numbers — which posts worked, why reach dropped, whether a pattern is real, or how to test a hypothesis.",
+   "usage": "触发词：「someone wants to understand their own linkedin numbers — whi」相关的需求",
+   "suite": ""
   },
   {
    "name": "linkedin-content",
    "category": "creative",
    "source": "local",
-   "description": "Use when someone wants to write, edit, or lint a LinkedIn post — a story, how-to, opinion piece, carousel script, video script, or poll — or wants an article, t"
+   "description": "Use when someone wants to write, edit, or lint a LinkedIn post — a story, how-to, opinion piece, carousel script, video script, or poll — or wants an article, t",
+   "usage": "说『写一条领英帖子』或『规划领英内容』",
+   "suite": ""
   },
   {
    "name": "linkedin-engagement",
    "category": "creative",
    "source": "local",
-   "description": "Use when someone wants to grow reach through comments, replies, groups, or outreach on LinkedIn — a commenting roster, a connection request note, a DM or InMail"
+   "description": "Use when someone wants to grow reach through comments, replies, groups, or outreach on LinkedIn — a commenting roster, a connection request note, a DM or InMail",
+   "usage": "触发词：「someone wants to grow reach through comments, replies, group」相关的需求",
+   "suite": ""
   },
   {
    "name": "linkedin-profile",
    "category": "creative",
    "source": "local",
-   "description": "Use when someone wants their LinkedIn profile audited or rewritten — headline, About section, experience bullets, Featured, banner, recommendations — or says \"f"
+   "description": "Use when someone wants their LinkedIn profile audited or rewritten — headline, About section, experience bullets, Featured, banner, recommendations — or says \"f",
+   "usage": "触发词：「someone wants their linkedin profile audited or rewritten — 」相关的需求",
+   "suite": ""
   },
   {
    "name": "linkedin-skills",
    "category": "creative",
    "source": "local",
-   "description": "Use when someone wants to grow an organic LinkedIn presence — a content strategy for a career change or consulting or thought leadership, a rewritten profile or"
+   "description": "Use when someone wants to grow an organic LinkedIn presence — a content strategy for a career change or consulting or thought leadership, a rewritten profile or",
+   "usage": "触发词：「someone wants to grow an organic linkedin presence — a conte」相关的需求",
+   "suite": ""
   },
   {
    "name": "linkedin-strategy",
    "category": "creative",
    "source": "local",
-   "description": "Use when someone needs a LinkedIn plan rather than a post — content pillars, positioning for a career change or consulting or thought leadership, a sustainable "
+   "description": "Use when someone needs a LinkedIn plan rather than a post — content pillars, positioning for a career change or consulting or thought leadership, a sustainable ",
+   "usage": "说『写一条领英帖子』或『规划领英内容』",
+   "suite": ""
   },
   {
    "name": "manim-video",
    "category": "creative",
    "source": "local",
-   "description": "Manim CE animations: 3Blue1Brown math/algo videos."
+   "description": "Manim CE animations: 3Blue1Brown math/algo videos.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "p5js",
    "category": "creative",
    "source": "local",
-   "description": "p5.js sketches: gen art, shaders, interactive, 3D."
+   "description": "p5.js sketches: gen art, shaders, interactive, 3D.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "popular-web-designs",
    "category": "creative",
    "source": "local",
-   "description": "54 real design systems (Stripe, Linear, Vercel) as HTML/CSS."
+   "description": "54 real design systems (Stripe, Linear, Vercel) as HTML/CSS.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "songwriting-and-ai-music",
    "category": "creative",
    "source": "local",
-   "description": "Songwriting craft and Suno AI music prompts."
+   "description": "Songwriting craft and Suno AI music prompts.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "sdlc-review",
    "category": "devops",
    "source": "local",
-   "description": "Review Kanban handoffs and route verified outcomes."
+   "description": "Review Kanban handoffs and route verified outcomes.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "email-inbox-triage",
    "category": "email",
    "source": "local",
-   "description": "Triage an inbox: prioritize threads, draft replies safely."
+   "description": "Triage an inbox: prioritize threads, draft replies safely.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "himalaya",
    "category": "email",
    "source": "local",
-   "description": "Himalaya CLI: IMAP/SMTP email from terminal."
+   "description": "Himalaya CLI: IMAP/SMTP email from terminal.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "gif-search",
    "category": "media",
    "source": "local",
-   "description": "Search/download GIFs from Tenor via curl + jq."
+   "description": "Search/download GIFs from Tenor via curl + jq.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "songsee",
    "category": "media",
    "source": "local",
-   "description": "Audio spectrograms/features (mel, chroma, MFCC) via CLI."
+   "description": "Audio spectrograms/features (mel, chroma, MFCC) via CLI.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "youtube-content",
    "category": "media",
    "source": "local",
-   "description": "YouTube transcripts to summaries, threads, blogs."
+   "description": "YouTube transcripts to summaries, threads, blogs.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "obsidian",
    "category": "note-taking",
    "source": "local",
-   "description": "Read, search, create, and edit notes in the Obsidian vault."
+   "description": "Read, search, create, and edit notes in the Obsidian vault.",
+   "usage": "说『记到 Obsidian』或『查笔记』",
+   "suite": ""
   },
   {
    "name": "airtable",
    "category": "productivity",
    "source": "local",
-   "description": "Airtable REST API via curl. Records CRUD, filters, upserts."
+   "description": "Airtable REST API via curl. Records CRUD, filters, upserts.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "box",
    "category": "productivity",
    "source": "local",
-   "description": "Box manages cloud files, sharing, search, and metadata."
+   "description": "Box manages cloud files, sharing, search, and metadata.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "capture",
    "category": "productivity",
    "source": "local",
-   "description": "Captures and organizes chaotic brain dumps into a structured, actionable system with zero information loss. Use this skill whenever the user says 'capture this'"
+   "description": "Captures and organizes chaotic brain dumps into a structured, actionable system with zero information loss. Use this skill whenever the user says 'capture this'",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "deep-work",
    "category": "productivity",
    "source": "local",
-   "description": "Use when someone wants to plan a deep work day, time-block their calendar or task list, budget or cut shallow work, protect focus hours, track deep-work session"
+   "description": "Use when someone wants to plan a deep work day, time-block their calendar or task list, budget or cut shallow work, protect focus hours, track deep-work session",
+   "usage": "触发词：「someone wants to plan a deep work day, time-block their cale」相关的需求",
+   "suite": ""
   },
   {
    "name": "document-to-action-items",
    "category": "productivity",
    "source": "local",
-   "description": "Extract cited obligations, deadlines, tasks from documents."
+   "description": "Extract cited obligations, deadlines, tasks from documents.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "docx",
    "category": "productivity",
    "source": "local",
-   "description": "Create, read, edit, template, and review Word .docx files."
+   "description": "Create, read, edit, template, and review Word .docx files.",
+   "usage": "说『生成/读取 Word/PDF/Excel/PPT』",
+   "suite": ""
   },
   {
    "name": "google-workspace",
    "category": "productivity",
    "source": "local",
-   "description": "Gmail, Calendar, Drive, Docs, Sheets via gws CLI or Python."
+   "description": "Gmail, Calendar, Drive, Docs, Sheets via gws CLI or Python.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "maps",
    "category": "productivity",
    "source": "local",
-   "description": "Geocode, POIs, routes, timezones via OpenStreetMap/OSRM."
+   "description": "Geocode, POIs, routes, timezones via OpenStreetMap/OSRM.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "meeting-action-items",
    "category": "productivity",
    "source": "local",
-   "description": "Turn meeting notes into cited decisions, owners, tickets."
+   "description": "Turn meeting notes into cited decisions, owners, tickets.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "notion",
    "category": "productivity",
    "source": "local",
-   "description": "Notion API + ntn CLI: pages, databases, markdown, Workers."
+   "description": "Notion API + ntn CLI: pages, databases, markdown, Workers.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "pdf",
    "category": "productivity",
    "source": "local",
-   "description": "PDF files: create, read, merge, fill, OCR, edit text."
+   "description": "PDF files: create, read, merge, fill, OCR, edit text.",
+   "usage": "说『生成/读取 Word/PDF/Excel/PPT』",
+   "suite": ""
   },
   {
    "name": "powerpoint",
    "category": "productivity",
    "source": "local",
-   "description": "Create, read, edit .pptx decks with python-pptx."
+   "description": "Create, read, edit .pptx decks with python-pptx.",
+   "usage": "说『生成/读取 Word/PDF/Excel/PPT』",
+   "suite": ""
   },
   {
    "name": "pricing-strategist",
    "category": "productivity",
    "source": "local",
-   "description": "Use when designing or revisiting product pricing — selecting a pricing model (subscription seat-based, usage-based, value-based, freemium, or hybrid), running V"
+   "description": "Use when designing or revisiting product pricing — selecting a pricing model (subscription seat-based, usage-based, value-based, freemium, or hybrid), running V",
+   "usage": "触发词：「designing or revisiting product pricing — selecting a pricin」相关的需求",
+   "suite": ""
   },
   {
    "name": "product-price-monitor",
    "category": "productivity",
    "source": "local",
-   "description": "Watch product, flight, or listing prices; alert on target."
+   "description": "Watch product, flight, or listing prices; alert on target.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "teams-meeting-pipeline",
    "category": "productivity",
    "source": "local",
-   "description": "Teams meeting summaries, job replay, Graph subscriptions."
+   "description": "Teams meeting summaries, job replay, Graph subscriptions.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "weekly-review-planning",
    "category": "productivity",
    "source": "local",
-   "description": "Weekly reset: commitments, stalled work, next-week plan."
+   "description": "Weekly reset: commitments, stalled work, next-week plan.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "xlsx",
    "category": "productivity",
    "source": "local",
-   "description": "Create, read, edit Excel .xlsx workbooks and CSVs."
+   "description": "Create, read, edit Excel .xlsx workbooks and CSVs.",
+   "usage": "说『生成/读取 Word/PDF/Excel/PPT』",
+   "suite": ""
   },
   {
    "name": "academic-paper-pipeline",
    "category": "research",
    "source": "local",
-   "description": "Academic papers with real experiments, rendered to Word/PDF."
+   "description": "Academic papers with real experiments, rendered to Word/PDF.",
+   "usage": "写论文/文献综述/投稿时让我用这套流程",
+   "suite": ""
+  },
+  {
+   "name": "bottleneck-hunter",
+   "category": "research",
+   "source": "local",
+   "description": "AI Berkshire skill: 供应链瓶颈猎手：AI驱动的全球产业链瓶颈套利. Source: skills/bottleneck-hunter.md.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
+  },
+  {
+   "name": "deep-company-series",
+   "category": "research",
+   "source": "local",
+   "description": "AI Berkshire skill: 看懂XX公司（深度公司系列）：3-8 篇长文拆一家公司. Source: skills/deep-company-series.md.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
+  },
+  {
+   "name": "dyp-ask",
+   "category": "research",
+   "source": "local",
+   "description": "AI Berkshire skill: 段永平问答：以他的方式思考. Source: skills/dyp-ask.md.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
+  },
+  {
+   "name": "earnings-review",
+   "category": "research",
+   "source": "local",
+   "description": "AI Berkshire skill: 财报精读：一手资料深度解读. Source: skills/earnings-review.md.",
+   "usage": "说『精读XX的财报』",
+   "suite": ""
+  },
+  {
+   "name": "earnings-team",
+   "category": "research",
+   "source": "local",
+   "description": "AI Berkshire skill: 财报精读团队：四大师并行解读 + 公众号发布. Source: skills/earnings-team.md.",
+   "usage": "说『精读XX的财报』",
+   "suite": ""
+  },
+  {
+   "name": "era-alpha",
+   "category": "research",
+   "source": "local",
+   "description": "AI Berkshire skill: 时代α捕手：高增长核心资产的识别-验证-持有框架. Source: skills/era-alpha.md.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
+  },
+  {
+   "name": "financial-data",
+   "category": "research",
+   "source": "local",
+   "description": "AI Berkshire skill: 财务数据获取与交叉验证规范. Source: skills/financial-data.md.",
+   "usage": "调财务数据时我会自动交叉验证两个来源",
+   "suite": ""
+  },
+  {
+   "name": "income-investment",
+   "category": "research",
+   "source": "local",
+   "description": "AI Berkshire skill: Income Investment: Durable and Opportunistic Distribution Analysis. Source: skills/income-investment.md.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
+  },
+  {
+   "name": "industry-funnel",
+   "category": "research",
+   "source": "local",
+   "description": "AI Berkshire skill: 行业漏斗筛选：从全市场到 3 家的价值投资精选流程. Source: skills/industry-funnel.md.",
+   "usage": "说『研究XX行业』或『从全市场筛3家』",
+   "suite": ""
+  },
+  {
+   "name": "industry-research",
+   "category": "research",
+   "source": "local",
+   "description": "AI Berkshire skill: 行业投资研究：产业链全景扫描 + 四大师个股分析框架. Source: skills/industry-research.md.",
+   "usage": "说『研究XX行业』或『从全市场筛3家』",
+   "suite": ""
+  },
+  {
+   "name": "investment-checklist",
+   "category": "research",
+   "source": "local",
+   "description": "AI Berkshire skill: 巴菲特价值投资买入前 Checklist. Source: skills/investment-checklist.md.",
+   "usage": "说『用巴菲特清单检查XX公司』",
+   "suite": "ai-berkshire 巴菲特价值投资体系（22 技能整套）"
+  },
+  {
+   "name": "investment-memo-craft",
+   "category": "research",
+   "source": "local",
+   "description": "Codex-only writing and layout overlay for AI Berkshire investment research reports. Use whenever Codex creates, rewrites, revises, or critiques company/industry",
+   "usage": "触发词：「ever codex creates, rewrites, revises, or critiques company/」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "investment-research",
+   "category": "research",
+   "source": "local",
+   "description": "AI Berkshire skill: 投资研究：巴菲特-芒格-段永平-李录 四大师综合分析框架. Source: skills/investment-research.md.",
+   "usage": "说『用巴菲特清单检查XX公司』",
+   "suite": ""
+  },
+  {
+   "name": "investment-team",
+   "category": "research",
+   "source": "local",
+   "description": "AI Berkshire skill: 投研团队：四角色并行分析框架. Source: skills/investment-team.md.",
+   "usage": "说『用巴菲特清单检查XX公司』",
+   "suite": ""
+  },
+  {
+   "name": "management-deep-dive",
+   "category": "research",
+   "source": "local",
+   "description": "AI Berkshire skill: 管理层纵深研究：买股票就是买人. Source: skills/management-deep-dive.md.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
+  },
+  {
+   "name": "news-pulse",
+   "category": "research",
+   "source": "local",
+   "description": "公司新闻脉搏：股价异动时快速归因。用 4 个并行 Agent 侦察公司事件/监管政策/行业对手/市场情绪，产出\"事件时间线 + 异动主因判断 + 是否触发论文重审\"。",
+   "usage": "看见持仓异动直接说『看看XX怎么回事』",
+   "suite": "ai-berkshire 体系 · 公司新闻脉搏快速归因"
+  },
+  {
+   "name": "portfolio-review",
+   "category": "research",
+   "source": "local",
+   "description": "AI Berkshire skill: 组合管理：从\\\"研究公司\\\"到\\\"管理组合\\\". Source: skills/portfolio-review.md.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
+  },
+  {
+   "name": "private-company-research",
+   "category": "research",
+   "source": "local",
+   "description": "AI Berkshire skill: 未上市公司研究：多Agent并行深度研究框架. Source: skills/private-company-research.md.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
+  },
+  {
+   "name": "quality-screen",
+   "category": "research",
+   "source": "local",
+   "description": "AI Berkshire skill: 去劣筛选：7条指标快速排除非一流公司. Source: skills/quality-screen.md.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
+  },
+  {
+   "name": "thesis-drift",
+   "category": "research",
+   "source": "local",
+   "description": "AI Berkshire skill: 投资论文漂移检测：分清事实变化与措辞变化. Source: skills/thesis-drift.md.",
+   "usage": "看见持仓异动直接说『看看XX怎么回事』",
+   "suite": ""
+  },
+  {
+   "name": "thesis-tracker",
+   "category": "research",
+   "source": "local",
+   "description": "AI Berkshire skill: 投资论文追踪：买入后的纪律系统. Source: skills/thesis-tracker.md.",
+   "usage": "看见持仓异动直接说『看看XX怎么回事』",
+   "suite": ""
+  },
+  {
+   "name": "wechat-article",
+   "category": "research",
+   "source": "local",
+   "description": "AI Berkshire skill: 微信公众号文章：作者-编辑-读者三Agent协作. Source: skills/wechat-article.md.",
+   "usage": "说『写一篇公众号文章』",
+   "suite": ""
   },
   {
    "name": "arxiv",
    "category": "research",
    "source": "local",
-   "description": "Search arXiv papers by keyword, author, category, or ID."
+   "description": "Search arXiv papers by keyword, author, category, or ID.",
+   "usage": "直接给论文关键词/编号，说『查一下』",
+   "suite": ""
   },
   {
    "name": "assignment-writing",
    "category": "research",
    "source": "local",
-   "description": "Homework writing: classify, route, deliver Word+PDF."
+   "description": "Homework writing: classify, route, deliver Word+PDF.",
+   "usage": "说『帮我写XX作业』或『按这份大纲出阅读清单』",
+   "suite": ""
   },
   {
    "name": "competitor-news-monitor",
    "category": "research",
    "source": "local",
-   "description": "Watch named companies for material news; cited digests."
+   "description": "Watch named companies for material news; cited digests.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "experimental-design",
    "category": "research",
    "source": "local",
-   "description": "Design experiments and studies BEFORE data is collected — choosing a design, randomizing, blocking, and laying out treatment combinations so results are interpr"
+   "description": "Design experiments and studies BEFORE data is collected — choosing a design, randomizing, blocking, and laying out treatment combinations so results are interpr",
+   "usage": "说『分析这份数据』或『这个实验怎么设计』",
+   "suite": ""
   },
   {
    "name": "grounded-citations",
    "category": "research",
    "source": "local",
-   "description": "Ground answers and documents in cited, verifiable sources."
+   "description": "Ground answers and documents in cited, verifiable sources.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "literature-review",
    "category": "research",
    "source": "local",
-   "description": "Conduct comprehensive, systematic literature reviews using multiple academic databases (PubMed, arXiv, bioRxiv, Semantic Scholar, etc.). This skill should be us"
+   "description": "Conduct comprehensive, systematic literature reviews using multiple academic databases (PubMed, arXiv, bioRxiv, Semantic Scholar, etc.). This skill should be us",
+   "usage": "写论文/文献综述/投稿时让我用这套流程",
+   "suite": ""
   },
   {
    "name": "llm-wiki",
    "category": "research",
    "source": "local",
-   "description": "Karpathy's LLM Wiki: build/query interlinked markdown KB."
+   "description": "Karpathy's LLM Wiki: build/query interlinked markdown KB.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "scientific-writing",
    "category": "research",
    "source": "local",
-   "description": "Draft, revise, and audit scientific manuscripts or reports with explicit evidence provenance, reporting-guideline coverage, authorship accountability, confident"
+   "description": "Draft, revise, and audit scientific manuscripts or reports with explicit evidence provenance, reporting-guideline coverage, authorship accountability, confident",
+   "usage": "写论文/文献综述/投稿时让我用这套流程",
+   "suite": ""
   },
   {
    "name": "statistical-analysis",
    "category": "research",
    "source": "local",
-   "description": "Guided statistical analysis for research data - test selection, assumption checking, effect sizes, power analysis, Bayesian alternatives, and APA-formatted repo"
+   "description": "Guided statistical analysis for research data - test selection, assumption checking, effect sizes, power analysis, Bayesian alternatives, and APA-formatted repo",
+   "usage": "说『分析这份数据』或『这个实验怎么设计』",
+   "suite": ""
+  },
+  {
+   "name": "stock-quote-fetch",
+   "category": "research",
+   "source": "local",
+   "description": "Use when fetching live stock quotes from free APIs.",
+   "usage": "触发词：「fetching live stock quotes from free apis」相关的需求",
+   "suite": ""
   },
   {
    "name": "syllabus",
    "category": "research",
    "source": "local",
-   "description": "Generates a curated supplementary reading list from any course syllabus using Consensus academic search. Grill-me intake (syllabus input format + course audienc"
+   "description": "Generates a curated supplementary reading list from any course syllabus using Consensus academic search. Grill-me intake (syllabus input format + course audienc",
+   "usage": "说『帮我写XX作业』或『按这份大纲出阅读清单』",
+   "suite": ""
   },
   {
    "name": "venue-templates",
    "category": "research",
    "source": "local",
-   "description": "Prepare journal manuscripts, conference papers, research posters, and grant documents using venue-specific formatting guidance and bundled LaTeX scaffolds. Use "
+   "description": "Prepare journal manuscripts, conference papers, research posters, and grant documents using venue-specific formatting guidance and bundled LaTeX scaffolds. Use ",
+   "usage": "写论文/文献综述/投稿时让我用这套流程",
+   "suite": ""
   },
   {
    "name": "xurl",
    "category": "social-media",
    "source": "local",
-   "description": "X/Twitter via xurl CLI: raw post search, posting, DM, media."
+   "description": "X/Twitter via xurl CLI: raw post search, posting, DM, media.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "adaptive",
    "category": "software-development",
    "source": "local",
-   "description": "Instructions to make or update an app's UI so that it adapts to different"
+   "description": "Instructions to make or update an app's UI so that it adapts to different",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "agp-9-upgrade",
    "category": "software-development",
    "source": "local",
-   "description": "Upgrades, or migrates, an Android project to use Android Gradle Plugin"
+   "description": "Upgrades, or migrates, an Android project to use Android Gradle Plugin",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": "Google android/skills 官方 · AGP 升级"
   },
   {
    "name": "android-cli",
    "category": "software-development",
    "source": "local",
-   "description": "Provides instructions for installing and using the `android` CLI. The"
+   "description": "Provides instructions for installing and using the `android` CLI. The",
+   "usage": "做安卓功能时我会自动加载官方技能",
+   "suite": ""
   },
   {
    "name": "android-intent-security",
    "category": "software-development",
    "source": "local",
-   "description": "Best practices for Android Intent security. Use this skill when auditing"
+   "description": "Best practices for Android Intent security. Use this skill when auditing",
+   "usage": "做安卓功能时我会自动加载官方技能",
+   "suite": ""
   },
   {
    "name": "android-profiler",
    "category": "software-development",
    "source": "local",
-   "description": "Manages Android performance profiling and debugging. Triggers when the user"
+   "description": "Manages Android performance profiling and debugging. Triggers when the user",
+   "usage": "做安卓功能时我会自动加载官方技能",
+   "suite": ""
   },
   {
    "name": "android-setup",
    "category": "software-development",
    "source": "local",
-   "description": "Use when building Android apps on this Windows box."
+   "description": "Use when building Android apps on this Windows box.",
+   "usage": "做安卓功能时我会自动加载官方技能",
+   "suite": ""
   },
   {
    "name": "appfunctions",
    "category": "software-development",
    "source": "local",
-   "description": "Analyzes Android apps to identify key user workflows for AppFunctions"
+   "description": "Analyzes Android apps to identify key user workflows for AppFunctions",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "astro-blog-github-pages",
    "category": "software-development",
    "source": "local",
-   "description": "Astro blog on GitHub Pages: theme customize, CMS, deploy."
+   "description": "Astro blog on GitHub Pages: theme customize, CMS, deploy.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "astro-paper-blog",
    "category": "software-development",
    "source": "local",
-   "description": "Use when building or fixing the astro-paper blog (myblog)."
+   "description": "Use when building or fixing the astro-paper blog (myblog).",
+   "usage": "触发词：「building or fixing the astro-paper blog (myblog)」相关的需求",
+   "suite": ""
   },
   {
    "name": "brainstorming",
    "category": "software-development",
    "source": "hub",
-   "description": "You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirem"
+   "description": "You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirem",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "camerax",
    "category": "software-development",
    "source": "local",
-   "description": "Provide technical guidance for Android camera development with CameraX."
+   "description": "Provide technical guidance for Android camera development with CameraX.",
+   "usage": "做安卓功能时我会自动加载官方技能",
+   "suite": "Google android/skills 官方安卓技能库（24 技能整套）"
   },
   {
    "name": "claude-desktop-3p-gateway",
    "category": "software-development",
    "source": "local",
-   "description": "Use when routing Claude Desktop through a custom gateway."
+   "description": "Use when routing Claude Desktop through a custom gateway.",
+   "usage": "触发词：「routing claude desktop through a custom gateway」相关的需求",
+   "suite": ""
   },
   {
    "name": "codebase-inspection",
    "category": "software-development",
    "source": "local",
-   "description": "Inspect codebases w/ pygount: LOC, languages, ratios."
+   "description": "Inspect codebases w/ pygount: LOC, languages, ratios.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "display-glasses-with-jetpack-compose-glimmer",
    "category": "software-development",
    "source": "local",
-   "description": "Provides guidelines for developing projected Android XR apps for display"
+   "description": "Provides guidelines for developing projected Android XR apps for display",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "docker-development",
    "category": "software-development",
    "source": "local",
-   "description": "Docker and container development agent skill and plugin for Dockerfile optimization, docker-compose orchestration, multi-stage builds, and container security ha"
+   "description": "Docker and container development agent skill and plugin for Dockerfile optimization, docker-compose orchestration, multi-stage builds, and container security ha",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "dogfood",
    "category": "software-development",
    "source": "local",
-   "description": "Exploratory QA of web apps: find bugs, evidence, reports."
+   "description": "Exploratory QA of web apps: find bugs, evidence, reports.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "edge-to-edge",
    "category": "software-development",
    "source": "local",
-   "description": "Use this skill to migrate your Jetpack Compose app to add adaptive edge-to-edge"
+   "description": "Use this skill to migrate your Jetpack Compose app to add adaptive edge-to-edge",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "engage-sdk-integration",
    "category": "software-development",
    "source": "local",
-   "description": "Helps developers integrate, debug, and resolve Play Engage SDK implementation"
+   "description": "Helps developers integrate, debug, and resolve Play Engage SDK implementation",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "executing-plans",
    "category": "software-development",
    "source": "hub",
-   "description": "Use when you have a written implementation plan to execute in a separate session with review checkpoints"
+   "description": "Use when you have a written implementation plan to execute in a separate session with review checkpoints",
+   "usage": "触发词：「you have a written implementation plan to execute in a separ」相关的需求",
+   "suite": ""
   },
   {
    "name": "github",
    "category": "software-development",
    "source": "local",
-   "description": "GitHub via gh CLI: PRs, issues, reviews, repos, auth."
+   "description": "GitHub via gh CLI: PRs, issues, reviews, repos, auth.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "github-account-automation",
    "category": "software-development",
    "source": "local",
-   "description": "GitHub account automation: SSH 443, gh CLI, repos, Pages."
+   "description": "GitHub account automation: SSH 443, gh CLI, repos, Pages.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "github-account-migration",
    "category": "software-development",
    "source": "local",
-   "description": "Use when migrating GitHub/Gitee/AtomGit accounts."
+   "description": "Use when migrating GitHub/Gitee/AtomGit accounts.",
+   "usage": "说『同步/迁移到三平台』",
+   "suite": ""
   },
   {
    "name": "github-daily-automation",
    "category": "software-development",
    "source": "local",
-   "description": "GitHub daily automation: commits, profile README, heatmap."
+   "description": "GitHub daily automation: commits, profile README, heatmap.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "github-daily-workbench",
    "category": "software-development",
    "source": "local",
-   "description": "Daily GitHub log: journal, auto push, profile README."
+   "description": "Daily GitHub log: journal, auto push, profile README.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "github-mirror-gitee-atomgit",
    "category": "software-development",
    "source": "local",
-   "description": "Use when mirroring GitHub repos to Gitee and AtomGit."
+   "description": "Use when mirroring GitHub repos to Gitee and AtomGit.",
+   "usage": "说『同步/迁移到三平台』",
+   "suite": ""
   },
   {
    "name": "github-resource-curation",
    "category": "software-development",
    "source": "local",
-   "description": "Use when curating GitHub repos into a local library."
+   "description": "Use when curating GitHub repos into a local library.",
+   "usage": "触发词：「curating github repos into a local library」相关的需求",
+   "suite": ""
   },
   {
    "name": "hermes-agent-skill-authoring",
    "category": "software-development",
    "source": "local",
-   "description": "Author in-repo SKILL.md files: frontmatter and structure."
+   "description": "Author in-repo SKILL.md files: frontmatter and structure.",
+   "usage": "问 Hermes 配置/用法时自动加载",
+   "suite": ""
   },
   {
    "name": "inspecting-hermes-desktop-dom",
    "category": "software-development",
    "source": "local",
-   "description": "Read the live Hermes desktop DOM/CSS over CDP."
+   "description": "Read the live Hermes desktop DOM/CSS over CDP.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "leanback-to-compose-tv-migration",
    "category": "software-development",
    "source": "local",
-   "description": "Provides instructions and architectural patterns for migrating Android"
+   "description": "Provides instructions and architectural patterns for migrating Android",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "media3-cast-integration",
    "category": "software-development",
    "source": "local",
-   "description": "Implements Google Cast support in Android apps using Jetpack Media3."
+   "description": "Implements Google Cast support in Android apps using Jetpack Media3.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "migrate-xml-views-to-jetpack-compose",
    "category": "software-development",
    "source": "local",
-   "description": "Provides a structured workflow for migrating an Android XML View to Jetpack"
+   "description": "Provides a structured workflow for migrating an Android XML View to Jetpack",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "mini-program-engineering-suite",
    "category": "software-development",
    "source": "local",
-   "description": "Orchestrate evidence-first engineering for WeChat and other mini programs from a vague idea or existing repository through project discovery, product specificat"
+   "description": "Orchestrate evidence-first engineering for WeChat and other mini programs from a vague idea or existing repository through project discovery, product specificat",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
+  },
+  {
+   "name": "foundation",
+   "category": "software-development",
+   "source": "local",
+   "description": "Apply evidence-first engineering discipline to any agent-built software project: fact discovery before action, evidence-calibrated status reporting, explicit ch",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
+  },
+  {
+   "name": "mini-program-architecture-skill",
+   "category": "software-development",
+   "source": "local",
+   "description": "Translate a confirmed mini-program product specification or bounded feature into an implementable architecture covering modules, pages, components, services, ca",
+   "usage": "做小程序时按证据驱动流程走",
+   "suite": "微信小程序工程套件（NocodeMrLi，10 技能整套）"
+  },
+  {
+   "name": "mini-program-debugging-skill",
+   "category": "software-development",
+   "source": "local",
+   "description": "Diagnose and fix mini-program failures through reproducible, evidence-driven root-cause analysis across source, state, asynchronous timing, caches, mock data, b",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
+  },
+  {
+   "name": "mini-program-implementation-skill",
+   "category": "software-development",
+   "source": "local",
+   "description": "Implement bounded features and fixes in existing or new mini-program codebases while preserving repository rules, user-owned changes, approved behavior, assets,",
+   "usage": "做小程序时按证据驱动流程走",
+   "suite": ""
+  },
+  {
+   "name": "mini-program-product-spec-skill",
+   "category": "software-development",
+   "source": "local",
+   "description": "Convert a vague mini-program idea, feature request, or partially documented product into an evidence-calibrated product specification with target users, core pr",
+   "usage": "做小程序时按证据驱动流程走",
+   "suite": ""
+  },
+  {
+   "name": "mini-program-project-intake-skill",
+   "category": "software-development",
+   "source": "local",
+   "description": "Perform a read-only, evidence-first intake of an existing mini-program repository before planning or modifying code. Use when users ask to take over, understand",
+   "usage": "触发词：「users ask to take over, understand」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "mini-program-release-skill",
+   "category": "software-development",
+   "source": "local",
+   "description": "Govern mini-program release readiness and evidence across source branches, semantic versions, build artifacts, test flags, debug paths, sensitive data, permissi",
+   "usage": "说『验证小程序』或『检查发布就绪度』",
+   "suite": ""
+  },
+  {
+   "name": "mini-program-ui-device-skill",
+   "category": "software-development",
+   "source": "local",
+   "description": "Design, preview, implement, and assess mini-program interfaces against an approved prototype, screenshot, visual reference, design system, or bounded UI request",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
+  },
+  {
+   "name": "mini-program-verification-skill",
+   "category": "software-development",
+   "source": "local",
+   "description": "Verify mini-program implementations and fixes with risk-calibrated evidence across static checks, unit tests, integration tests, state matrices, simulators, rea",
+   "usage": "说『验证小程序』或『检查发布就绪度』",
+   "suite": ""
+  },
+  {
+   "name": "wechat-mini-program-platform-skill",
+   "category": "software-development",
+   "source": "local",
+   "description": "Analyze WeChat Mini Program platform constraints and evidence layers for an idea or existing repository, including source configuration, build output, WeChat De",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "ml-kit-genai-prompt-api",
    "category": "software-development",
    "source": "local",
-   "description": "Analyzes Android codebases to implement ML Kit GenAI Prompt API. Use"
+   "description": "Analyzes Android codebases to implement ML Kit GenAI Prompt API. Use",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "navigation-3",
    "category": "software-development",
    "source": "local",
-   "description": "Learn how to install and migrate to Jetpack Navigation 3, and how to"
+   "description": "Learn how to install and migrate to Jetpack Navigation 3, and how to",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "navigation-event",
    "category": "software-development",
    "source": "local",
-   "description": "Intercept back gestures and run Predictive Back animations using the"
+   "description": "Intercept back gestures and run Predictive Back animations using the",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "node-inspect-debugger",
    "category": "software-development",
    "source": "local",
-   "description": "Debug Node.js via --inspect + Chrome DevTools Protocol CLI."
+   "description": "Debug Node.js via --inspect + Chrome DevTools Protocol CLI.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "pi-coding-agent",
    "category": "software-development",
    "source": "local",
-   "description": "Use when installing or configuring the Pi coding agent."
+   "description": "Use when installing or configuring the Pi coding agent.",
+   "usage": "触发词：「installing or configuring the pi coding agent」相关的需求",
+   "suite": ""
   },
   {
    "name": "play-billing-library-version-upgrade",
    "category": "software-development",
    "source": "local",
-   "description": "Use this skill when upgrading or migrating an Android project from any"
+   "description": "Use this skill when upgrading or migrating an Android project from any",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "play-policy-insights",
    "category": "software-development",
    "source": "local",
-   "description": "Automated auditor designed to verify Android applications against Google Play Policy domains. It cross-references static code analysis with Play Store declarati"
+   "description": "Automated auditor designed to verify Android applications against Google Play Policy domains. It cross-references static code analysis with Play Store declarati",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "python-debugpy",
    "category": "software-development",
    "source": "local",
-   "description": "Debug Python: pdb REPL + debugpy remote (DAP)."
+   "description": "Debug Python: pdb REPL + debugpy remote (DAP).",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "r8-analyzer",
    "category": "software-development",
    "source": "local",
-   "description": "Analyzes Android build files and R8 keep rules to identify redundancies,"
+   "description": "Analyzes Android build files and R8 keep rules to identify redundancies,",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "requesting-code-review",
    "category": "software-development",
    "source": "local",
-   "description": "Pre-commit review: security scan, quality gates, auto-fix."
+   "description": "Pre-commit review: security scan, quality gates, auto-fix.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "restore-credentials",
    "category": "software-development",
    "source": "local",
-   "description": "Provides knowledge and workflows to implement Android's Restore Credentials"
+   "description": "Provides knowledge and workflows to implement Android's Restore Credentials",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "run-node-dev-projects",
    "category": "software-development",
    "source": "local",
-   "description": "Run or clean up a Node web dev project dropped in D:\\code."
+   "description": "Run or clean up a Node web dev project dropped in D:\\code.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "simplify-code",
    "category": "software-development",
    "source": "local",
-   "description": "Parallel 4-agent cleanup of recent code changes."
+   "description": "Parallel 4-agent cleanup of recent code changes.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "spike",
    "category": "software-development",
    "source": "local",
-   "description": "Throwaway experiments to validate an idea before build."
+   "description": "Throwaway experiments to validate an idea before build.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "styles",
    "category": "software-development",
    "source": "local",
-   "description": "Use this skill to integrate the Jetpack Compose Styles API into an Android"
+   "description": "Use this skill to integrate the Jetpack Compose Styles API into an Android",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "subagent-driven-development",
    "category": "software-development",
    "source": "hub",
-   "description": "Execute plans via delegate_task subagents (2-stage review)."
+   "description": "Execute plans via delegate_task subagents (2-stage review).",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "systematic-debugging",
    "category": "software-development",
    "source": "local",
-   "description": "4-phase root cause debugging: understand bugs before fixing."
+   "description": "4-phase root cause debugging: understand bugs before fixing.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "test-driven-development",
    "category": "software-development",
    "source": "local",
-   "description": "TDD: enforce RED-GREEN-REFACTOR, tests before code."
+   "description": "TDD: enforce RED-GREEN-REFACTOR, tests before code.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "testing-setup",
    "category": "software-development",
    "source": "local",
-   "description": "Analyze and create a testing strategy for native Android apps - install"
+   "description": "Analyze and create a testing strategy for native Android apps - install",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "universal-scraping-architect",
    "category": "software-development",
    "source": "local",
-   "description": "Use for web scraping, crawling, document extraction, API parsing, or building validation-heavy data pipelines using Firecrawl or local Python scripts."
+   "description": "Use for web scraping, crawling, document extraction, API parsing, or building validation-heavy data pipelines using Firecrawl or local Python scripts.",
+   "usage": "说『爬XX网站』或『抓取XX数据』",
+   "suite": ""
   },
   {
    "name": "using-superpowers",
    "category": "software-development",
    "source": "hub",
-   "description": "Use when starting any conversation - establishes how to find and use skills, requiring skill invocation before ANY response including clarifying questions"
+   "description": "Use when starting any conversation - establishes how to find and use skills, requiring skill invocation before ANY response including clarifying questions",
+   "usage": "触发词：「starting any conversation - establishes how to find and use 」相关的需求",
+   "suite": ""
   },
   {
    "name": "verification-before-completion",
    "category": "software-development",
    "source": "hub",
-   "description": "Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirming output be"
+   "description": "Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirming output be",
+   "usage": "触发词：「about to claim work is complete, fixed, or passing, before c」相关的需求",
+   "suite": ""
   },
   {
    "name": "verified-email",
    "category": "software-development",
    "source": "local",
-   "description": "Provides a complete workflow for implementing verified email retrieval"
+   "description": "Provides a complete workflow for implementing verified email retrieval",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "wear-compose-m3",
    "category": "software-development",
    "source": "local",
-   "description": "Expert guidance for working with Wear OS Compose Material3. Use this"
+   "description": "Expert guidance for working with Wear OS Compose Material3. Use this",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "web-project-local-run",
    "category": "software-development",
    "source": "local",
-   "description": "Run web dev: pnpm .cmd shims, health-check, actual port."
+   "description": "Run web dev: pnpm .cmd shims, health-check, actual port.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "wechat-miniprogram-devtools",
    "category": "software-development",
    "source": "local",
-   "description": "WeChat mini-program local dev: DevTools, CLI, compile."
+   "description": "WeChat mini-program local dev: DevTools, CLI, compile.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "windows-app-install-and-launch",
    "category": "software-development",
    "source": "local",
-   "description": "Use when installing or shortcutting a Windows app."
+   "description": "Use when installing or shortcutting a Windows app.",
+   "usage": "触发词：「installing or shortcutting a windows app」相关的需求",
+   "suite": ""
   },
   {
    "name": "windows-cli-subprocess",
    "category": "software-development",
    "source": "local",
-   "description": "Fix Windows python/bash subprocess resolution & CLI shims."
+   "description": "Fix Windows python/bash subprocess resolution & CLI shims.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "windows-file-deletion",
    "category": "software-development",
    "source": "local",
-   "description": "Delete stubborn Windows dirs/files; NTFS phantom diagnosis."
+   "description": "Delete stubborn Windows dirs/files; NTFS phantom diagnosis.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "windows-github-release-install",
    "category": "software-development",
    "source": "local",
-   "description": "Use when installing a GitHub release on Windows."
+   "description": "Use when installing a GitHub release on Windows.",
+   "usage": "触发词：「installing a github release on windows」相关的需求",
+   "suite": ""
   },
   {
    "name": "windows-gui-automation-uia",
    "category": "software-development",
    "source": "local",
-   "description": "Use when automating a Windows desktop app's UI."
+   "description": "Use when automating a Windows desktop app's UI.",
+   "usage": "触发词：「automating a windows desktop app's ui」相关的需求",
+   "suite": ""
   },
   {
    "name": "windows-scheduled-automation",
    "category": "software-development",
    "source": "local",
-   "description": "Windows scheduled tasks: schtasks, git-bash, popups."
+   "description": "Windows scheduled tasks: schtasks, git-bash, popups.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "windows-shortcut-icons",
    "category": "software-development",
    "source": "local",
-   "description": "Use when changing a Windows shortcut's icon."
+   "description": "Use when changing a Windows shortcut's icon.",
+   "usage": "触发词：「changing a windows shortcut's icon」相关的需求",
+   "suite": ""
   },
   {
    "name": "writing-plans",
    "category": "software-development",
    "source": "hub",
-   "description": "Use when you have a spec or requirements for a multi-step task, before touching code"
+   "description": "Use when you have a spec or requirements for a multi-step task, before touching code",
+   "usage": "触发词：「you have a spec or requirements for a multi-step task, befor」相关的需求",
+   "suite": ""
   },
   {
    "name": "astro-github-pages",
    "category": "web",
    "source": "local",
-   "description": "Maintain the Astro blog on GitHub Pages (base, API, CMS)."
+   "description": "Maintain the Astro blog on GitHub Pages (base, API, CMS).",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
   },
   {
    "name": "blocked-page-recovery",
    "category": "web",
    "source": "local",
-   "description": "Use when a fetch fails: 403/429, paywall, WAF, bot wall."
+   "description": "Use when a fetch fails: 403/429, paywall, WAF, bot wall.",
+   "usage": "触发词：「a fetch fails: 403/429, paywall, waf, bot wall」相关的需求",
+   "suite": ""
   },
   {
    "name": "scrapling-web-scraping",
    "category": "web",
    "source": "local",
-   "description": "Use when scraping web pages with Scrapling."
-  },
-  {
-   "name": "apple-notes",
-   "category": "apple",
-   "source": "builtin",
-   "description": "Manage Apple Notes via memo CLI: create, search, edit."
-  },
-  {
-   "name": "apple-reminders",
-   "category": "apple",
-   "source": "builtin",
-   "description": "Apple Reminders via remindctl: add, list, complete."
-  },
-  {
-   "name": "findmy",
-   "category": "apple",
-   "source": "builtin",
-   "description": "Track Apple devices/AirTags via FindMy.app on macOS."
-  },
-  {
-   "name": "imessage",
-   "category": "apple",
-   "source": "builtin",
-   "description": "Send and receive iMessages/SMS via the imsg CLI on macOS."
-  },
-  {
-   "name": "claude-code",
-   "category": "autonomous-ai-agents",
-   "source": "builtin",
-   "description": "Delegate coding to Claude Code CLI (features, PRs)."
-  },
-  {
-   "name": "codex",
-   "category": "autonomous-ai-agents",
-   "source": "builtin",
-   "description": "Delegate coding to OpenAI Codex CLI (features, PRs)."
-  },
-  {
-   "name": "computer-use",
-   "category": "autonomous-ai-agents",
-   "source": "builtin",
-   "description": "Drive the desktop background-first; escalate on signal."
-  },
-  {
-   "name": "hermes-agent",
-   "category": "autonomous-ai-agents",
-   "source": "builtin",
-   "description": "Use, configure, theme, extend, and orchestrate Hermes Agent."
-  },
-  {
-   "name": "opencode",
-   "category": "autonomous-ai-agents",
-   "source": "builtin",
-   "description": "Delegate coding to OpenCode CLI (features, PR review)."
-  },
-  {
-   "name": "architecture-diagram",
-   "category": "creative",
-   "source": "builtin",
-   "description": "Dark-themed SVG architecture/cloud/infra diagrams as HTML."
-  },
-  {
-   "name": "ascii-video",
-   "category": "creative",
-   "source": "builtin",
-   "description": "ASCII video: convert video/audio to colored ASCII MP4/GIF."
-  },
-  {
-   "name": "baoyu-infographic",
-   "category": "creative",
-   "source": "builtin",
-   "description": "Infographics: 21 layouts x 21 styles (信息图, 可视化)."
-  },
-  {
-   "name": "claude-design",
-   "category": "creative",
-   "source": "builtin",
-   "description": "Design one-off HTML artifacts (landing, deck, prototype)."
-  },
-  {
-   "name": "design-md",
-   "category": "creative",
-   "source": "builtin",
-   "description": "Author/validate/export Google's DESIGN.md token spec files."
-  },
-  {
-   "name": "humanizer",
-   "category": "creative",
-   "source": "builtin",
-   "description": "Humanize text: strip AI-isms and add real voice."
-  },
-  {
-   "name": "manim-video",
-   "category": "creative",
-   "source": "builtin",
-   "description": "Manim CE animations: 3Blue1Brown math/algo videos."
-  },
-  {
-   "name": "p5js",
-   "category": "creative",
-   "source": "builtin",
-   "description": "p5.js sketches: gen art, shaders, interactive, 3D."
-  },
-  {
-   "name": "popular-web-designs",
-   "category": "creative",
-   "source": "builtin",
-   "description": "54 real design systems (Stripe, Linear, Vercel) as HTML/CSS."
-  },
-  {
-   "name": "songwriting-and-ai-music",
-   "category": "creative",
-   "source": "builtin",
-   "description": "Songwriting craft and Suno AI music prompts."
-  },
-  {
-   "name": "sdlc-review",
-   "category": "devops",
-   "source": "builtin",
-   "description": "Review Kanban handoffs and route verified outcomes."
-  },
-  {
-   "name": "email-inbox-triage",
-   "category": "email",
-   "source": "builtin",
-   "description": "Triage an inbox: prioritize threads, draft replies safely."
-  },
-  {
-   "name": "himalaya",
-   "category": "email",
-   "source": "builtin",
-   "description": "Himalaya CLI: IMAP/SMTP email from terminal."
-  },
-  {
-   "name": "gif-search",
-   "category": "media",
-   "source": "builtin",
-   "description": "Search/download GIFs from Tenor via curl + jq."
-  },
-  {
-   "name": "songsee",
-   "category": "media",
-   "source": "builtin",
-   "description": "Audio spectrograms/features (mel, chroma, MFCC) via CLI."
-  },
-  {
-   "name": "youtube-content",
-   "category": "media",
-   "source": "builtin",
-   "description": "YouTube transcripts to summaries, threads, blogs."
-  },
-  {
-   "name": "obsidian",
-   "category": "note-taking",
-   "source": "builtin",
-   "description": "Read, search, create, and edit notes in the Obsidian vault."
-  },
-  {
-   "name": "airtable",
-   "category": "productivity",
-   "source": "builtin",
-   "description": "Airtable REST API via curl. Records CRUD, filters, upserts."
-  },
-  {
-   "name": "box",
-   "category": "productivity",
-   "source": "builtin",
-   "description": "Box manages cloud files, sharing, search, and metadata."
-  },
-  {
-   "name": "document-to-action-items",
-   "category": "productivity",
-   "source": "builtin",
-   "description": "Extract cited obligations, deadlines, tasks from documents."
-  },
-  {
-   "name": "docx",
-   "category": "productivity",
-   "source": "builtin",
-   "description": "Create, read, edit, template, and review Word .docx files."
-  },
-  {
-   "name": "google-workspace",
-   "category": "productivity",
-   "source": "builtin",
-   "description": "Gmail, Calendar, Drive, Docs, Sheets via gws CLI or Python."
-  },
-  {
-   "name": "maps",
-   "category": "productivity",
-   "source": "builtin",
-   "description": "Geocode, POIs, routes, timezones via OpenStreetMap/OSRM."
-  },
-  {
-   "name": "meeting-action-items",
-   "category": "productivity",
-   "source": "builtin",
-   "description": "Turn meeting notes into cited decisions, owners, tickets."
-  },
-  {
-   "name": "notion",
-   "category": "productivity",
-   "source": "builtin",
-   "description": "Notion API + ntn CLI: pages, databases, markdown, Workers."
-  },
-  {
-   "name": "pdf",
-   "category": "productivity",
-   "source": "builtin",
-   "description": "PDF files: create, read, merge, fill, OCR, edit text."
-  },
-  {
-   "name": "powerpoint",
-   "category": "productivity",
-   "source": "builtin",
-   "description": "Create, read, edit .pptx decks with python-pptx."
-  },
-  {
-   "name": "product-price-monitor",
-   "category": "productivity",
-   "source": "builtin",
-   "description": "Watch product, flight, or listing prices; alert on target."
-  },
-  {
-   "name": "teams-meeting-pipeline",
-   "category": "productivity",
-   "source": "builtin",
-   "description": "Teams meeting summaries, job replay, Graph subscriptions."
-  },
-  {
-   "name": "weekly-review-planning",
-   "category": "productivity",
-   "source": "builtin",
-   "description": "Weekly reset: commitments, stalled work, next-week plan."
-  },
-  {
-   "name": "xlsx",
-   "category": "productivity",
-   "source": "builtin",
-   "description": "Create, read, edit Excel .xlsx workbooks and CSVs."
-  },
-  {
-   "name": "arxiv",
-   "category": "research",
-   "source": "builtin",
-   "description": "Search arXiv papers by keyword, author, category, or ID."
-  },
-  {
-   "name": "competitor-news-monitor",
-   "category": "research",
-   "source": "builtin",
-   "description": "Watch named companies for material news; cited digests."
-  },
-  {
-   "name": "grounded-citations",
-   "category": "research",
-   "source": "builtin",
-   "description": "Ground answers and documents in cited, verifiable sources."
-  },
-  {
-   "name": "llm-wiki",
-   "category": "research",
-   "source": "builtin",
-   "description": "Karpathy's LLM Wiki: build/query interlinked markdown KB."
-  },
-  {
-   "name": "xurl",
-   "category": "social-media",
-   "source": "builtin",
-   "description": "X/Twitter via xurl CLI: raw post search, posting, DM, media."
-  },
-  {
-   "name": "codebase-inspection",
-   "category": "software-development",
-   "source": "builtin",
-   "description": "Inspect codebases w/ pygount: LOC, languages, ratios."
-  },
-  {
-   "name": "dogfood",
-   "category": "software-development",
-   "source": "builtin",
-   "description": "Exploratory QA of web apps: find bugs, evidence, reports."
-  },
-  {
-   "name": "github",
-   "category": "software-development",
-   "source": "builtin",
-   "description": "GitHub via gh CLI: PRs, issues, reviews, repos, auth."
-  },
-  {
-   "name": "hermes-agent-skill-authoring",
-   "category": "software-development",
-   "source": "builtin",
-   "description": "Author in-repo SKILL.md files: frontmatter and structure."
-  },
-  {
-   "name": "inspecting-hermes-desktop-dom",
-   "category": "software-development",
-   "source": "builtin",
-   "description": "Read the live Hermes desktop DOM/CSS over CDP."
-  },
-  {
-   "name": "node-inspect-debugger",
-   "category": "software-development",
-   "source": "builtin",
-   "description": "Debug Node.js via --inspect + Chrome DevTools Protocol CLI."
-  },
-  {
-   "name": "python-debugpy",
-   "category": "software-development",
-   "source": "builtin",
-   "description": "Debug Python: pdb REPL + debugpy remote (DAP)."
-  },
-  {
-   "name": "requesting-code-review",
-   "category": "software-development",
-   "source": "builtin",
-   "description": "Pre-commit review: security scan, quality gates, auto-fix."
-  },
-  {
-   "name": "simplify-code",
-   "category": "software-development",
-   "source": "builtin",
-   "description": "Parallel 4-agent cleanup of recent code changes."
-  },
-  {
-   "name": "spike",
-   "category": "software-development",
-   "source": "builtin",
-   "description": "Throwaway experiments to validate an idea before build."
-  },
-  {
-   "name": "systematic-debugging",
-   "category": "software-development",
-   "source": "builtin",
-   "description": "4-phase root cause debugging: understand bugs before fixing."
-  },
-  {
-   "name": "test-driven-development",
-   "category": "software-development",
-   "source": "builtin",
-   "description": "TDD: enforce RED-GREEN-REFACTOR, tests before code."
-  },
-  {
-   "name": "blocked-page-recovery",
-   "category": "web",
-   "source": "builtin",
-   "description": "Use when a fetch fails: 403/429, paywall, WAF, bot wall."
+   "description": "Use when scraping web pages with Scrapling.",
+   "usage": "说『爬XX网站』或『抓取XX数据』",
+   "suite": ""
   }
  ]
 }
