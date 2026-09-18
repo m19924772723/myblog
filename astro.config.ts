@@ -22,6 +22,9 @@ import config from "./astro-paper.config";
 export default defineConfig({
   site: config.site.url,
   base: "/myblog",
+  server: {
+    host: true,  // 监听所有地址（IPv4 + IPv6），便于手机局域网访问
+  },
   integrations: [
     mdx(),
     sitemap({
