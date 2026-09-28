@@ -1,15 +1,20 @@
 {
- "generatedAt": "2026-09-19 23:32",
- "total": 237,
+ "generatedAt": "2026-09-28 22:46",
+ "total": 329,
  "bySource": {
   "builtin": 0,
   "hub": 6,
-  "local": 231
+  "local": 323
  },
  "categories": [
   {
+   "id": "product-management",
+   "count": 80,
+   "icon": "📦"
+  },
+  {
    "id": "software-development",
-   "count": 78,
+   "count": 80,
    "icon": "💻"
   },
   {
@@ -23,18 +28,18 @@
    "icon": "🔬"
   },
   {
-   "id": "creative",
-   "count": 17,
-   "icon": "🎨"
-  },
-  {
    "id": "productivity",
-   "count": 17,
+   "count": 22,
    "icon": "⚡"
   },
   {
+   "id": "creative",
+   "count": 18,
+   "icon": "🎨"
+  },
+  {
    "id": "autonomous-ai-agents",
-   "count": 7,
+   "count": 8,
    "icon": "🤖"
   },
   {
@@ -43,19 +48,24 @@
    "icon": ""
   },
   {
+   "id": "web",
+   "count": 4,
+   "icon": "🌐"
+  },
+  {
    "id": "media",
    "count": 3,
    "icon": "🎬"
   },
   {
-   "id": "web",
-   "count": 3,
-   "icon": "🌐"
-  },
-  {
    "id": "email",
    "count": 2,
    "icon": "📧"
+  },
+  {
+   "id": "academic",
+   "count": 1,
+   "icon": "📦"
   },
   {
    "id": "devops",
@@ -71,9 +81,22 @@
    "id": "social-media",
    "count": 1,
    "icon": "📣"
+  },
+  {
+   "id": "susan-projects",
+   "count": 1,
+   "icon": "📦"
   }
  ],
  "skills": [
+  {
+   "name": "english-essay",
+   "category": "academic",
+   "source": "local",
+   "description": "Write English academic essays with AI-detection awareness.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
+  },
   {
    "name": "apple-notes",
    "category": "apple",
@@ -144,6 +167,14 @@
    "source": "local",
    "description": "Use when installing Hermes skills from hub/GitHub.",
    "usage": "触发词：「installing hermes skills from hub/github」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "multi-agent-orchestration",
+   "category": "autonomous-ai-agents",
+   "source": "local",
+   "description": "Use when building multi-agent LLM systems with agent SDKs.",
+   "usage": "触发词：「building multi-agent llm systems with agent sdks」相关的需求",
    "suite": ""
   },
   {
@@ -295,6 +326,14 @@
    "category": "creative",
    "source": "local",
    "description": "Songwriting craft and Suno AI music prompts.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
+  },
+  {
+   "name": "visual-deliverable-design",
+   "category": "creative",
+   "source": "local",
+   "description": "Posters, infographics, mind maps as authored vector art.",
    "usage": "有相关需求时直接说，我会自动调用该技能",
    "suite": ""
   },
@@ -811,6 +850,654 @@
    "suite": ""
   },
   {
+   "name": "acquisition-channel-advisor",
+   "category": "product-management",
+   "source": "local",
+   "description": "Evaluate acquisition channels using unit economics, customer quality, and scalability. Use when deciding whether to scale, test, or kill a growth channel.",
+   "usage": "触发词：「deciding whether to scale, test, or kill a growth channel」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "agent-orchestration-advisor",
+   "category": "product-management",
+   "source": "local",
+   "description": "Design multi-agent AI workflows with clear boundaries, handoffs, and monitoring. Use when a complex PM task should run as parallel specialized agents instead of",
+   "usage": "触发词：「a complex pm task should run as parallel specialized agents 」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "ai-pm-career-prep",
+   "category": "product-management",
+   "source": "local",
+   "description": "Use when planning AI PM career prep or its artifacts.",
+   "usage": "触发词：「planning ai pm career prep or its artifacts」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "ai-shaped-readiness-advisor",
+   "category": "product-management",
+   "source": "local",
+   "description": "Assess whether your product work is AI-first or AI-shaped. Use when evaluating AI maturity and choosing the next team capability to build.",
+   "usage": "触发词：「evaluating ai maturity and choosing the next team capability」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "altitude-horizon-framework",
+   "category": "product-management",
+   "source": "local",
+   "description": "Understand the PM-to-Director transition through altitude and horizon thinking. Use when diagnosing scope, time-horizon, or leadership-level gaps.",
+   "usage": "触发词：「diagnosing scope, time-horizon, or leadership-level gaps」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "ansoff-matrix",
+   "category": "product-management",
+   "source": "local",
+   "description": "Map evidence-backed growth options across the Ansoff Matrix with risk-rated sequencing. Use when the question is where the next tranche of growth comes from, an",
+   "usage": "触发词：「the question is where the next tranche of growth comes from,」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "autonomous-investigation",
+   "category": "product-management",
+   "source": "local",
+   "description": "The protocol behind every investigation skill. Use when AI research must proceed without you: search-plan gate, Fact/Inference/Assumption labels, confidence sta",
+   "usage": "触发词：「ai research must proceed without you: search-plan gate, fact」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "battle-card-builder",
+   "category": "product-management",
+   "source": "local",
+   "description": "Research and draft a competitive battle card from public evidence — every claim labeled and sourced. Use when a rep needs a field-action card, not a research re",
+   "usage": "触发词：「a rep needs a field-action card, not a research re」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "business-health-diagnostic",
+   "category": "product-management",
+   "source": "local",
+   "description": "Diagnose SaaS business health across growth, retention, efficiency, and capital. Use when preparing a business review or prioritizing urgent fixes.",
+   "usage": "触发词：「preparing a business review or prioritizing urgent fixes」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "company-intel",
+   "category": "product-management",
+   "source": "local",
+   "description": "Research a company, industry, or competitor set using web search and seven analytical lenses. Use when you need structured intel that feeds downstream PM skills",
+   "usage": "触发词：「you need structured intel that feeds downstream pm skills」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "company-research",
+   "category": "product-management",
+   "source": "local",
+   "description": "Create a company research brief with executive quotes, product strategy, and org context. Use when preparing for interviews, competitive analysis, partnerships,",
+   "usage": "触发词：「preparing for interviews, competitive analysis, partnerships」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "competitive-analysis-process",
+   "category": "product-management",
+   "source": "local",
+   "description": "Orchestrate a complete competitive analysis across six steps, from landscape to strategic direction. Use when you need the full picture, not a single scan or ca",
+   "usage": "触发词：「you need the full picture, not a single scan or ca」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "competitive-intel-watch",
+   "category": "product-management",
+   "source": "local",
+   "description": "Scheduled delta monitoring against a prior competitive snapshot. Use when tracking competitors on a cadence: material shifts only, cited evidence, battle-card u",
+   "usage": "触发词：「tracking competitors on a cadence: material shifts only, cit」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "competitive-research-snapshot",
+   "category": "product-management",
+   "source": "local",
+   "description": "Research a competitive landscape with cited snapshots, a comparison matrix, and so-what implications. Use when a product decision needs competitive grounding, n",
+   "usage": "触发词：「a product decision needs competitive grounding, n」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "context-engineering-advisor",
+   "category": "product-management",
+   "source": "local",
+   "description": "Diagnose context stuffing vs. context engineering. Use when an AI workflow feels bloated, brittle, or hard to steer reliably.",
+   "usage": "触发词：「an ai workflow feels bloated, brittle, or hard to steer reli」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "customer-journey-map",
+   "category": "product-management",
+   "source": "local",
+   "description": "Create a customer journey map across stages, touchpoints, actions, emotions, and metrics. Use when diagnosing a broken experience or aligning a team on the full",
+   "usage": "触发词：「diagnosing a broken experience or aligning a team on the ful」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "customer-journey-mapping-workshop",
+   "category": "product-management",
+   "source": "local",
+   "description": "Run a customer journey mapping workshop with adaptive questions and outputs. Use when you need to map stages, actions, emotions, pain points, and opportunities ",
+   "usage": "触发词：「you need to map stages, actions, emotions, pain points, and 」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "derisk-measurement-advisor",
+   "category": "product-management",
+   "source": "local",
+   "description": "Identify what to measure, test, or track to de-risk a product or AI idea. Use when stress-testing an idea across internal (DUFV) and external (PESTEL) dimension",
+   "usage": "触发词：「stress-testing an idea across internal (dufv) and external (」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "director-readiness-advisor",
+   "category": "product-management",
+   "source": "local",
+   "description": "Guide the PM-to-Director transition across preparing, interviewing, landing, and recalibrating. Use when leadership scope is changing and you need practical coa",
+   "usage": "触发词：「leadership scope is changing and you need practical coa」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "discovery-interview-prep",
+   "category": "product-management",
+   "source": "local",
+   "description": "Plan customer discovery interviews with the right goal, segment, constraints, and method. Use when preparing interviews for problem validation, churn research, ",
+   "usage": "触发词：「preparing interviews for problem validation, churn research,」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "discovery-process",
+   "category": "product-management",
+   "source": "local",
+   "description": "Run a full discovery cycle from problem hypothesis to validated solution. Use when a team needs a structured path through framing, interviews, synthesis, and ex",
+   "usage": "触发词：「a team needs a structured path through framing, interviews, 」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "eol-checklist",
+   "category": "product-management",
+   "source": "local",
+   "description": "Build a phase-gated EOL checklist sized to the sunset, with a named owner on every item. Use when the decision to retire is made and you need the operational pl",
+   "usage": "触发词：「the decision to retire is made and you need the operational 」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "eol-internal-enablement",
+   "category": "product-management",
+   "source": "local",
+   "description": "Build the support FAQ, sales talking points, and objection handling teams need before an EOL announcement. Use when customer-facing teams must be ready before c",
+   "usage": "触发词：「customer-facing teams must be ready before c」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "eol-message",
+   "category": "product-management",
+   "source": "local",
+   "description": "Write a right-sized EOL announcement — brief notice through full phased comms — with rationale, customer impact, and next steps. Use when retiring a product, fe",
+   "usage": "触发词：「retiring a product, fe」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "eol-process",
+   "category": "product-management",
+   "source": "local",
+   "description": "Run a product sunset end to end — decide, align, plan, prepare, announce, close. Use when you need the whole EOL process, not just one artifact.",
+   "usage": "触发词：「you need the whole eol process, not just one artifact」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "eol-readiness-advisor",
+   "category": "product-management",
+   "source": "local",
+   "description": "Run a go/no-go assessment for retiring a product or feature, then right-size the effort. Use when someone says \\\"we should probably kill this\\\" and nobody has m",
+   "usage": "触发词：「someone says \\\"we should probably kill this\\\" and nobody has」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "eol-stakeholder-sequence",
+   "category": "product-management",
+   "source": "local",
+   "description": "Plan who to talk to about a sunset, in what order, and what each conversation must cover. Use when an EOL decision is made and you want the landmines found befo",
+   "usage": "触发词：「an eol decision is made and you want the landmines found bef」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "epic-breakdown-advisor",
+   "category": "product-management",
+   "source": "local",
+   "description": "Break down epics into user stories with Humanizing Work split patterns. Use when a backlog item is too large to estimate, sequence, or deliver safely.",
+   "usage": "触发词：「a backlog item is too large to estimate, sequence, or delive」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "epic-hypothesis",
+   "category": "product-management",
+   "source": "local",
+   "description": "Frame an epic as a testable hypothesis with target user, expected outcome, and validation method. Use when defining a major initiative before roadmap, discovery",
+   "usage": "触发词：「defining a major initiative before roadmap, discovery」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "executive-onboarding-playbook",
+   "category": "product-management",
+   "source": "local",
+   "description": "Plan a VP or CPO 30-60-90 day diagnostic onboarding path. Use when entering a new executive product role and avoiding premature change.",
+   "usage": "触发词：「entering a new executive product role and avoiding premature」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "feature-investment-advisor",
+   "category": "product-management",
+   "source": "local",
+   "description": "Evaluate feature investments using revenue impact, cost structure, ROI, and strategy. Use when deciding whether a feature deserves investment.",
+   "usage": "触发词：「deciding whether a feature deserves investment」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "finance-based-pricing-advisor",
+   "category": "product-management",
+   "source": "local",
+   "description": "Evaluate pricing changes using ARPU, conversion, churn risk, NRR, and payback. Use when deciding whether a pricing move should ship.",
+   "usage": "触发词：「deciding whether a pricing move should ship」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "finance-metrics-quickref",
+   "category": "product-management",
+   "source": "local",
+   "description": "Look up SaaS finance metrics, formulas, and benchmarks fast. Use when you need a quick metric definition, formula, or benchmark during analysis.",
+   "usage": "触发词：「you need a quick metric definition, formula, or benchmark du」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "incoming-request-advisor",
+   "category": "product-management",
+   "source": "local",
+   "description": "Decode an incoming message into a structured breakdown separating the literal ask from the job-to-be-done. Use when a loaded Slack ping, email, mandate, or esca",
+   "usage": "触发词：「a loaded slack ping, email, mandate, or esca」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "intel-discipline-advisor",
+   "category": "product-management",
+   "source": "local",
+   "description": "Triage a competitive or market question into the right intelligence disciplines, cadence, and executing skill. Use when you know something needs researching but",
+   "usage": "触发词：「you know something needs researching but」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "intelligence-collection-disciplines",
+   "category": "product-management",
+   "source": "local",
+   "description": "Run competitive research like an intelligence agency: eight collection disciplines (OSINT to MASINT), signal-to-inference chains, and fusion. Use when one-sourc",
+   "usage": "触发词：「one-sourc」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "job-search-planning",
+   "category": "product-management",
+   "source": "local",
+   "description": "Use when building or updating a job-search plan set.",
+   "usage": "触发词：「building or updating a job-search plan set」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "jobs-to-be-done",
+   "category": "product-management",
+   "source": "local",
+   "description": "Uncover customer jobs, pains, and gains in a structured JTBD format. Use when clarifying unmet needs, repositioning a product, or improving discovery and messag",
+   "usage": "触发词：「clarifying unmet needs, repositioning a product, or improvin」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "lean-ux-canvas",
+   "category": "product-management",
+   "source": "local",
+   "description": "Guide teams through Lean UX Canvas v2. Use when framing a business problem, surfacing assumptions, and defining what to learn next.",
+   "usage": "触发词：「framing a business problem, surfacing assumptions, and defin」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "lifecycle-play-advisor",
+   "category": "product-management",
+   "source": "local",
+   "description": "Diagnose where a product sits in its lifecycle and which play fits — extend, replace, or retire. Use when a product is fading and you need the call, not just th",
+   "usage": "触发词：「a product is fading and you need the call, not just th」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "market-landscape-scan",
+   "category": "product-management",
+   "source": "local",
+   "description": "Map a market's segments, players, substitutes, and whitespace with cited evidence. Use when entering or re-evaluating a market before sizing, positioning, or pi",
+   "usage": "触发词：「entering or re-evaluating a market before sizing, positionin」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "opportunity-solution-tree",
+   "category": "product-management",
+   "source": "local",
+   "description": "Build an Opportunity Solution Tree from outcomes to opportunities, solutions, and tests. Use when a stakeholder request needs problem framing before you decide ",
+   "usage": "触发词：「a stakeholder request needs problem framing before you decid」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "organic-growth-advisor",
+   "category": "product-management",
+   "source": "local",
+   "description": "Identify which organic growth path to pursue — new segments, geographies, channels, or products. Use when diagnosing where a growth constraint lives and which M",
+   "usage": "触发词：「diagnosing where a growth constraint lives and which m」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "pestel-analysis",
+   "category": "product-management",
+   "source": "local",
+   "description": "Analyze political, economic, social, technological, environmental, and legal forces. Use when external market shifts could materially affect a product, roadmap,",
+   "usage": "触发词：「external market shifts could materially affect a product, ro」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "pestel-delta-monitor",
+   "category": "product-management",
+   "source": "local",
+   "description": "Quarterly re-scan of a prior PESTEL analysis. Use when checking which macro factors moved, which assumptions broke, and what's new — turning PESTEL from a works",
+   "usage": "触发词：「checking which macro factors moved, which assumptions broke,」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "pm-career-coaching",
+   "category": "product-management",
+   "source": "local",
+   "description": "Use when producing AI PM career artifacts for this user.",
+   "usage": "触发词：「producing ai pm career artifacts for this user」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "pm-skill-creator",
+   "category": "product-management",
+   "source": "local",
+   "description": "Design a new PM skill through guided conversation. Use when you have raw content or an idea and want to shape it into a compliant skill.",
+   "usage": "触发词：「you have raw content or an idea and want to shape it into a 」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "pol-probe",
+   "category": "product-management",
+   "source": "local",
+   "description": "Define a Proof of Life probe to test a risky hypothesis cheaply. Use when you need harsh truth before building real product.",
+   "usage": "触发词：「you need harsh truth before building real product」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "pol-probe-advisor",
+   "category": "product-management",
+   "source": "local",
+   "description": "Select the right Proof of Life (PoL) probe based on hypothesis, risk, and resources. Use this to match the validation method to the real learning goal, not tool",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
+  },
+  {
+   "name": "porters-five-forces",
+   "category": "product-management",
+   "source": "local",
+   "description": "Read an industry's structure through Porter's Five Forces with documented signals per rating, ending at the profit pool. Use when weighing market entry or when ",
+   "usage": "触发词：「weighing market entry or when」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "positioning-statement",
+   "category": "product-management",
+   "source": "local",
+   "description": "Create a Geoffrey Moore-style positioning statement. Use when clarifying who you serve, what problem you solve, your category, and why you're different from alt",
+   "usage": "触发词：「clarifying who you serve, what problem you solve, your categ」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "positioning-workshop",
+   "category": "product-management",
+   "source": "local",
+   "description": "Run a positioning workshop that surfaces target customer, unmet need, category, benefits, and differentiation. Use when your product messaging feels fuzzy, gene",
+   "usage": "触发词：「your product messaging feels fuzzy, gene」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "prd-development",
+   "category": "product-management",
+   "source": "local",
+   "description": "Build a structured PRD that connects problem, users, solution, and success criteria. Use when turning discovery notes into an engineering-ready document for a m",
+   "usage": "触发词：「turning discovery notes into an engineering-ready document f」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "press-release",
+   "category": "product-management",
+   "source": "local",
+   "description": "Write an Amazon-style press release that defines customer value before building. Use when aligning stakeholders on a new product, feature, or strategic bet.",
+   "usage": "触发词：「aligning stakeholders on a new product, feature, or strategi」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "pricing-packaging-tracker",
+   "category": "product-management",
+   "source": "local",
+   "description": "Track competitor pricing and packaging as a diffable time series. Use when monitoring tiers, gates, limits, and price moves on a monthly or quarterly cadence.",
+   "usage": "触发词：「monitoring tiers, gates, limits, and price moves on a monthl」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "prioritization-advisor",
+   "category": "product-management",
+   "source": "local",
+   "description": "Choose a prioritization framework based on stage, team context, and stakeholder needs. Use when deciding between RICE, ICE, value/effort, or another scoring app",
+   "usage": "触发词：「deciding between rice, ice, value/effort, or another scoring」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "problem-framing-canvas",
+   "category": "product-management",
+   "source": "local",
+   "description": "Guide teams through MITRE's Problem Framing Canvas. Use when you need a clearer problem statement before jumping to solutions.",
+   "usage": "触发词：「you need a clearer problem statement before jumping to solut」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "problem-statement",
+   "category": "product-management",
+   "source": "local",
+   "description": "Write a user-centered problem statement with who is blocked, what they are trying to do, why it matters, and how it feels. Use when framing discovery, prioritiz",
+   "usage": "触发词：「framing discovery, prioritiz」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "product-lifecycle-plays",
+   "category": "product-management",
+   "source": "local",
+   "description": "Map a product's lifecycle stage and choose between extension, replacement, and retirement plays. Use when a product is maturing or declining and the next move i",
+   "usage": "触发词：「a product is maturing or declining and the next move i」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "product-sense-interview-answer",
+   "category": "product-management",
+   "source": "local",
+   "description": "Structure a spoken PM product-sense answer with assumptions, segmentation, pain-point prioritization, and MVP tradeoffs. Use when practicing design, improve, or",
+   "usage": "触发词：「practicing design, improve, or」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "product-strategy-session",
+   "category": "product-management",
+   "source": "local",
+   "description": "Run an end-to-end product strategy session across positioning, discovery, and roadmap planning. Use when a team needs validated direction before committing to e",
+   "usage": "触发词：「a team needs validated direction before committing to e」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "proto-persona",
+   "category": "product-management",
+   "source": "local",
+   "description": "Create a proto-persona from current research, market signals, and team knowledge. Use when you need a working customer profile before deeper validation.",
+   "usage": "触发词：「you need a working customer profile before deeper validation」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "recommendation-canvas",
+   "category": "product-management",
+   "source": "local",
+   "description": "Evaluate an AI product idea across outcomes, hypotheses, risks, and positioning. Use when deciding whether an AI solution deserves investment or recommendation.",
+   "usage": "触发词：「deciding whether an ai solution deserves investment or recom」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "roadmap-planning",
+   "category": "product-management",
+   "source": "local",
+   "description": "Plan a strategic roadmap across prioritization, epic definition, stakeholder alignment, and sequencing. Use when turning strategy into a release plan that teams",
+   "usage": "触发词：「turning strategy into a release plan that teams」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "saas-economics-efficiency-metrics",
+   "category": "product-management",
+   "source": "local",
+   "description": "Evaluate SaaS unit economics and capital efficiency. Use when deciding whether the business can scale efficiently or needs correction.",
+   "usage": "触发词：「deciding whether the business can scale efficiently or needs」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "saas-revenue-growth-metrics",
+   "category": "product-management",
+   "source": "local",
+   "description": "Calculate SaaS revenue, retention, and growth metrics. Use when diagnosing momentum, churn, expansion, or product-market-fit signals.",
+   "usage": "触发词：「diagnosing momentum, churn, expansion, or product-market-fit」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "skill-authoring-workflow",
+   "category": "product-management",
+   "source": "local",
+   "description": "Turn raw PM content into a compliant, publish-ready skill. Use when creating or updating a repo skill without breaking standards.",
+   "usage": "触发词：「creating or updating a repo skill without breaking standards」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "stakeholder-engagement-advisor",
+   "category": "product-management",
+   "source": "local",
+   "description": "Plan engagement for a specific stakeholder. Use when preparing an outreach, navigating resistance, or aligning a critical relationship before a key milestone.",
+   "usage": "触发词：「preparing an outreach, navigating resistance, or aligning a 」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "stakeholder-identification",
+   "category": "product-management",
+   "source": "local",
+   "description": "Map every stakeholder before engaging anyone. Use when launching an initiative, scoping discovery, or building an engagement plan from scratch.",
+   "usage": "触发词：「launching an initiative, scoping discovery, or building an e」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "stakeholder-mapping",
+   "category": "product-management",
+   "source": "local",
+   "description": "Prioritize stakeholders using two complementary grids. Use when setting engagement strategy and surfacing whose voice needs elevating after stakeholder identifi",
+   "usage": "触发词：「setting engagement strategy and surfacing whose voice needs 」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "storyboard",
+   "category": "product-management",
+   "source": "local",
+   "description": "Create a six-frame storyboard that shows a user's journey from problem to solution. Use when you need a fast narrative for alignment, concept reviews, or demos.",
+   "usage": "触发词：「you need a fast narrative for alignment, concept reviews, or」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "swot-analysis",
+   "category": "product-management",
+   "source": "local",
+   "description": "Build an evidence-cited SWOT of one company — yours or a competitor's — from public sources, ending with the S-O/W-T crossings. Use for strategy reviews, board ",
+   "usage": "触发词：「strategy reviews, board」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "tam-sam-som-calculator",
+   "category": "product-management",
+   "source": "local",
+   "description": "Calculate TAM, SAM, and SOM with explicit assumptions, methods, and caveats. Use when sizing a market for a product idea, business case, or executive review.",
+   "usage": "触发词：「sizing a market for a product idea, business case, or execut」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "user-story",
+   "category": "product-management",
+   "source": "local",
+   "description": "Create user stories with Mike Cohn format and Gherkin acceptance criteria. Use when turning user needs into development-ready work with clear outcomes and testa",
+   "usage": "触发词：「turning user needs into development-ready work with clear ou」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "user-story-mapping",
+   "category": "product-management",
+   "source": "local",
+   "description": "Create a user story map that lays out activities, steps, tasks, and release slices. Use when planning a workflow, backlog, or MVP around the user journey.",
+   "usage": "触发词：「planning a workflow, backlog, or mvp around the user journey」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "user-story-mapping-workshop",
+   "category": "product-management",
+   "source": "local",
+   "description": "Run a user story mapping workshop with adaptive questions and a structured map output. Use when you need backbone activities, tasks, and release slices for a wo",
+   "usage": "触发词：「you need backbone activities, tasks, and release slices for 」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "user-story-splitting",
+   "category": "product-management",
+   "source": "local",
+   "description": "Break a large story or epic into smaller deliverable stories using proven split patterns. Use when backlog items are too big for estimation, sequencing, or inde",
+   "usage": "触发词：「backlog items are too big for estimation, sequencing, or ind」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "voice-of-customer-miner",
+   "category": "product-management",
+   "source": "local",
+   "description": "Mine public reviews, app stores, and forums for unmet needs, competitor weaknesses, and switching triggers — with quoted evidence. Use when you want customer vo",
+   "usage": "触发词：「you want customer vo」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "vp-cpo-readiness-advisor",
+   "category": "product-management",
+   "source": "local",
+   "description": "Guide the transition to VP or CPO across preparing, interviewing, landing, and recalibrating. Use when executive product scope is changing fast.",
+   "usage": "触发词：「executive product scope is changing fast」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "workshop-facilitation",
+   "category": "product-management",
+   "source": "local",
+   "description": "Facilitate workshop sessions in a one-step, multi-turn flow. Use when an interactive skill needs consistent pacing, options, and progress tracking.",
+   "usage": "触发词：「an interactive skill needs consistent pacing, options, and p」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "ai-pm-workspace",
+   "category": "productivity",
+   "source": "local",
+   "description": "Use when continuing AI-PM workspace at D:/code/hermes/ai_pm",
+   "usage": "触发词：「continuing ai-pm workspace at d:/code/hermes/ai_pm」相关的需求",
+   "suite": ""
+  },
+  {
    "name": "airtable",
    "category": "productivity",
    "source": "local",
@@ -843,6 +1530,14 @@
    "suite": ""
   },
   {
+   "name": "document-content-extraction",
+   "category": "productivity",
+   "source": "local",
+   "description": "Use when a docx/pdf hides data in MathType formulas/figures.",
+   "usage": "触发词：「a docx/pdf hides data in mathtype formulas/figures」相关的需求",
+   "suite": ""
+  },
+  {
    "name": "document-to-action-items",
    "category": "productivity",
    "source": "local",
@@ -859,11 +1554,35 @@
    "suite": ""
   },
   {
+   "name": "english-writing-ai-evasion",
+   "category": "productivity",
+   "source": "local",
+   "description": "Evade AI detection on English essays by changing register.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
+  },
+  {
+   "name": "excel-deliverables",
+   "category": "productivity",
+   "source": "local",
+   "description": "Use when building Excel plan tables/清单 via openpyxl scripts",
+   "usage": "触发词：「building excel plan tables/清单 via openpyxl scripts」相关的需求",
+   "suite": ""
+  },
+  {
    "name": "google-workspace",
    "category": "productivity",
    "source": "local",
    "description": "Gmail, Calendar, Drive, Docs, Sheets via gws CLI or Python.",
    "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
+  },
+  {
+   "name": "learning-path-planning",
+   "category": "productivity",
+   "source": "local",
+   "description": "Use when writing a study or career learning-path plan.",
+   "usage": "触发词：「writing a study or career learning-path plan」相关的需求",
    "suite": ""
   },
   {
@@ -1427,6 +2146,14 @@
    "suite": ""
   },
   {
+   "name": "desktop-project-deliverables",
+   "category": "software-development",
+   "source": "local",
+   "description": "Use when a desktop Project governs where session files live.",
+   "usage": "触发词：「a desktop project governs where session files live」相关的需求",
+   "suite": ""
+  },
+  {
    "name": "display-glasses-with-jetpack-compose-glimmer",
    "category": "software-development",
    "source": "local",
@@ -1560,6 +2287,14 @@
    "source": "local",
    "description": "Provides instructions and architectural patterns for migrating Android",
    "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
+  },
+  {
+   "name": "llm-api-relay-setup",
+   "category": "software-development",
+   "source": "local",
+   "description": "Use when adding a 中转站 API key to a desktop app or CLI.",
+   "usage": "触发词：「adding a 中转站 api key to a desktop app or cli」相关的需求",
    "suite": ""
   },
   {
@@ -1947,6 +2682,14 @@
    "suite": ""
   },
   {
+   "name": "susan-projects",
+   "category": "susan-projects",
+   "source": "local",
+   "description": "Use when working with the Susan cluster at D:/code/susan.",
+   "usage": "触发词：「working with the susan cluster at d:/code/susan」相关的需求",
+   "suite": ""
+  },
+  {
    "name": "astro-github-pages",
    "category": "web",
    "source": "local",
@@ -1960,6 +2703,14 @@
    "source": "local",
    "description": "Use when a fetch fails: 403/429, paywall, WAF, bot wall.",
    "usage": "触发词：「a fetch fails: 403/429, paywall, waf, bot wall」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "impeccable",
+   "category": "web",
+   "source": "local",
+   "description": "Use when the user wants to design, redesign, shape, critique, audit, polish, clarify, distill, harden, optimize, adapt, animate, colorize, extract, or otherwise",
+   "usage": "触发词：「the user wants to design, redesign, shape, critique, audit, 」相关的需求",
    "suite": ""
   },
   {
