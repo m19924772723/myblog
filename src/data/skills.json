@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-10-07 22:53",
- "total": 330,
+ "generatedAt": "2026-10-08 22:07",
+ "total": 331,
  "bySource": {
   "builtin": 0,
   "hub": 6,
-  "local": 324
+  "local": 325
  },
  "categories": [
   {
@@ -29,7 +29,7 @@
   },
   {
    "id": "productivity",
-   "count": 23,
+   "count": 24,
    "icon": "⚡"
   },
   {
@@ -1487,6 +1487,14 @@
    "source": "local",
    "description": "Facilitate workshop sessions in a one-step, multi-turn flow. Use when an interactive skill needs consistent pacing, options, and progress tracking.",
    "usage": "触发词：「an interactive skill needs consistent pacing, options, and p」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "ai-fde-learning-line",
+   "category": "productivity",
+   "source": "local",
+   "description": "Use when continuing the FDE line at D:/code/hermes/ai-fde.",
+   "usage": "触发词：「continuing the fde line at d:/code/hermes/ai-fde」相关的需求",
    "suite": ""
   },
   {
