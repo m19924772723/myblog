@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-10-08 22:08",
- "total": 331,
+ "generatedAt": "2026-10-09 22:48",
+ "total": 332,
  "bySource": {
   "builtin": 0,
   "hub": 6,
-  "local": 325
+  "local": 326
  },
  "categories": [
   {
@@ -29,7 +29,7 @@
   },
   {
    "id": "productivity",
-   "count": 24,
+   "count": 25,
    "icon": "⚡"
   },
   {
@@ -1487,6 +1487,14 @@
    "source": "local",
    "description": "Facilitate workshop sessions in a one-step, multi-turn flow. Use when an interactive skill needs consistent pacing, options, and progress tracking.",
    "usage": "触发词：「an interactive skill needs consistent pacing, options, and p」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "ai-agent-learning-line",
+   "category": "productivity",
+   "source": "local",
+   "description": "Use when continuing the ai-agent learning line.",
+   "usage": "触发词：「continuing the ai-agent learning line」相关的需求",
    "suite": ""
   },
   {
