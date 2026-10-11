@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-10-09 22:48",
- "total": 332,
+ "generatedAt": "2026-10-11 09:59",
+ "total": 333,
  "bySource": {
   "builtin": 0,
   "hub": 6,
-  "local": 326
+  "local": 327
  },
  "categories": [
   {
@@ -29,7 +29,7 @@
   },
   {
    "id": "productivity",
-   "count": 25,
+   "count": 26,
    "icon": "⚡"
   },
   {
@@ -1663,6 +1663,14 @@
    "source": "local",
    "description": "Watch product, flight, or listing prices; alert on target.",
    "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
+  },
+  {
+   "name": "project-study-rotation",
+   "category": "productivity",
+   "source": "local",
+   "description": "Use when running the 17-day dev study rotation.",
+   "usage": "触发词：「running the 17-day dev study rotation」相关的需求",
    "suite": ""
   },
   {
