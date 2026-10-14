@@ -1,21 +1,21 @@
 {
- "generatedAt": "2026-10-12 22:01",
- "total": 333,
+ "generatedAt": "2026-10-14 09:18",
+ "total": 374,
  "bySource": {
   "builtin": 0,
   "hub": 6,
-  "local": 327
+  "local": 368
  },
  "categories": [
+  {
+   "id": "software-development",
+   "count": 81,
+   "icon": "💻"
+  },
   {
    "id": "product-management",
    "count": 80,
    "icon": "📦"
-  },
-  {
-   "id": "software-development",
-   "count": 80,
-   "icon": "💻"
   },
   {
    "id": "matlab",
@@ -24,7 +24,7 @@
   },
   {
    "id": "research",
-   "count": 46,
+   "count": 47,
    "icon": "🔬"
   },
   {
@@ -68,14 +68,94 @@
    "icon": "📦"
   },
   {
+   "id": "claude-history-ingest",
+   "count": 1,
+   "icon": "📦"
+  },
+  {
+   "id": "code-understand",
+   "count": 1,
+   "icon": "📦"
+  },
+  {
+   "id": "codex-history-ingest",
+   "count": 1,
+   "icon": "📦"
+  },
+  {
+   "id": "copilot-history-ingest",
+   "count": 1,
+   "icon": "📦"
+  },
+  {
+   "id": "cross-linker",
+   "count": 1,
+   "icon": "📦"
+  },
+  {
+   "id": "daily-update",
+   "count": 1,
+   "icon": "📦"
+  },
+  {
    "id": "devops",
    "count": 1,
    "icon": "🛠"
   },
   {
+   "id": "graph-colorize",
+   "count": 1,
+   "icon": "📦"
+  },
+  {
+   "id": "hermes-history-ingest",
+   "count": 1,
+   "icon": "📦"
+  },
+  {
+   "id": "impl-validator",
+   "count": 1,
+   "icon": "📦"
+  },
+  {
+   "id": "memory-bridge",
+   "count": 1,
+   "icon": "📦"
+  },
+  {
    "id": "note-taking",
    "count": 1,
    "icon": "📝"
+  },
+  {
+   "id": "obsidian-layout-adjustment",
+   "count": 1,
+   "icon": "📦"
+  },
+  {
+   "id": "openclaw-history-ingest",
+   "count": 1,
+   "icon": "📦"
+  },
+  {
+   "id": "pi-history-ingest",
+   "count": 1,
+   "icon": "📦"
+  },
+  {
+   "id": "session-brain",
+   "count": 1,
+   "icon": "📦"
+  },
+  {
+   "id": "session-search",
+   "count": 1,
+   "icon": "📦"
+  },
+  {
+   "id": "skill-creator",
+   "count": 1,
+   "icon": "📦"
   },
   {
    "id": "social-media",
@@ -84,6 +164,121 @@
   },
   {
    "id": "susan-projects",
+   "count": 1,
+   "icon": "📦"
+  },
+  {
+   "id": "tag-taxonomy",
+   "count": 1,
+   "icon": "📦"
+  },
+  {
+   "id": "vault-skill-factory",
+   "count": 1,
+   "icon": "📦"
+  },
+  {
+   "id": "wiki-agent",
+   "count": 1,
+   "icon": "📦"
+  },
+  {
+   "id": "wiki-capture",
+   "count": 1,
+   "icon": "📦"
+  },
+  {
+   "id": "wiki-context-pack",
+   "count": 1,
+   "icon": "📦"
+  },
+  {
+   "id": "wiki-dashboard",
+   "count": 1,
+   "icon": "📦"
+  },
+  {
+   "id": "wiki-dedup",
+   "count": 1,
+   "icon": "📦"
+  },
+  {
+   "id": "wiki-digest",
+   "count": 1,
+   "icon": "📦"
+  },
+  {
+   "id": "wiki-export",
+   "count": 1,
+   "icon": "📦"
+  },
+  {
+   "id": "wiki-history-ingest",
+   "count": 1,
+   "icon": "📦"
+  },
+  {
+   "id": "wiki-import",
+   "count": 1,
+   "icon": "📦"
+  },
+  {
+   "id": "wiki-ingest",
+   "count": 1,
+   "icon": "📦"
+  },
+  {
+   "id": "wiki-lint",
+   "count": 1,
+   "icon": "📦"
+  },
+  {
+   "id": "wiki-narrate",
+   "count": 1,
+   "icon": "📦"
+  },
+  {
+   "id": "wiki-query",
+   "count": 1,
+   "icon": "📦"
+  },
+  {
+   "id": "wiki-rebuild",
+   "count": 1,
+   "icon": "📦"
+  },
+  {
+   "id": "wiki-research",
+   "count": 1,
+   "icon": "📦"
+  },
+  {
+   "id": "wiki-setup",
+   "count": 1,
+   "icon": "📦"
+  },
+  {
+   "id": "wiki-stage-commit",
+   "count": 1,
+   "icon": "📦"
+  },
+  {
+   "id": "wiki-status",
+   "count": 1,
+   "icon": "📦"
+  },
+  {
+   "id": "wiki-switch",
+   "count": 1,
+   "icon": "📦"
+  },
+  {
+   "id": "wiki-synthesize",
+   "count": 1,
+   "icon": "📦"
+  },
+  {
+   "id": "wiki-update",
    "count": 1,
    "icon": "📦"
   }
@@ -191,6 +386,38 @@
    "source": "local",
    "description": "Deploy/run the Xianyu AI customer-service agent.",
    "usage": "闲鱼客服系统：改议价策略/重部署",
+   "suite": ""
+  },
+  {
+   "name": "claude-history-ingest",
+   "category": "claude-history-ingest",
+   "source": "local",
+   "description": "Ingest Claude Code conversation/session history into Obsidian as distilled knowledge. Use for importing or mining past Claude sessions, .claude data, project/se",
+   "usage": "触发词：「importing or mining past claude sessions, .claude data, proj」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "code-understand",
+   "category": "code-understand",
+   "source": "local",
+   "description": "Map the load-bearing files, symbols, callers, and dependencies of an unfamiliar codebase before making changes. Use for architecture orientation, impact analysi",
+   "usage": "触发词：「architecture orientation, impact analysi」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "codex-history-ingest",
+   "category": "codex-history-ingest",
+   "source": "local",
+   "description": "Ingest Codex CLI conversation/session history into Obsidian as distilled knowledge. Use for importing or mining ~/.codex sessions, rollout files, indexes, or tr",
+   "usage": "触发词：「importing or mining ~/.codex sessions, rollout files, indexe」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "copilot-history-ingest",
+   "category": "copilot-history-ingest",
+   "source": "local",
+   "description": "Ingest GitHub Copilot CLI/session history into Obsidian as distilled knowledge. Use for importing or mining Copilot history; not for general Copilot help, simpl",
+   "usage": "触发词：「importing or mining copilot history; not for general copilot」相关的需求",
    "suite": ""
   },
   {
@@ -338,6 +565,22 @@
    "suite": ""
   },
   {
+   "name": "cross-linker",
+   "category": "cross-linker",
+   "source": "local",
+   "description": "Find and add missing cross-references between wiki pages. Use when pages are disconnected or after large ingestion. This modifies pages to add links; use wiki-l",
+   "usage": "触发词：「pages are disconnected or after large ingestion. this modifi」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "daily-update",
+   "category": "daily-update",
+   "source": "local",
+   "description": "Run or configure the daily wiki maintenance cycle: check source freshness, refresh the index and hot.md, and manage its scheduled 9 AM launchd/systemd/cron remi",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
+  },
+  {
    "name": "sdlc-review",
    "category": "devops",
    "source": "local",
@@ -358,6 +601,38 @@
    "category": "email",
    "source": "local",
    "description": "Himalaya CLI: IMAP/SMTP email from terminal.",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
+  },
+  {
+   "name": "graph-colorize",
+   "category": "graph-colorize",
+   "source": "local",
+   "description": "Configure Obsidian graph colors by tag, folder, category, or visibility by updating .obsidian/graph.json. Use for graph colorization; preserve other graph setti",
+   "usage": "触发词：「graph colorization; preserve other graph setti」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "hermes-history-ingest",
+   "category": "hermes-history-ingest",
+   "source": "local",
+   "description": "Ingest Hermes agent history into Obsidian as distilled knowledge. Use for importing or mining ~/.hermes sessions, memories, or logs; use wiki-agent for targeted",
+   "usage": "触发词：「importing or mining ~/.hermes sessions, memories, or logs; u」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "impl-validator",
+   "category": "impl-validator",
+   "source": "local",
+   "description": "Independently check whether an implementation matches its stated goal and return PASS/WARN/FAIL with actionable issues. Use for second-opinion validation of an ",
+   "usage": "触发词：「second-opinion validation of an」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "llm-wiki",
+   "category": "research",
+   "source": "local",
+   "description": "Karpathy's LLM Wiki: build/query interlinked markdown KB.",
    "usage": "有相关需求时直接说，我会自动调用该技能",
    "suite": ""
   },
@@ -842,11 +1117,43 @@
    "suite": ""
   },
   {
+   "name": "memory-bridge",
+   "category": "memory-bridge",
+   "source": "local",
+   "description": "Browse or compare wiki knowledge by originating AI tool. Use for cross-tool memory questions, tool-specific knowledge, or gap/diff analysis between Codex, Claud",
+   "usage": "触发词：「cross-tool memory questions, tool-specific knowledge, or gap」相关的需求",
+   "suite": ""
+  },
+  {
    "name": "obsidian",
    "category": "note-taking",
    "source": "local",
    "description": "Read, search, create, and edit notes in the Obsidian vault.",
    "usage": "说『记到 Obsidian』或『查笔记』",
+   "suite": ""
+  },
+  {
+   "name": "obsidian-layout-adjustment",
+   "category": "obsidian-layout-adjustment",
+   "source": "local",
+   "description": "Adjust the user's Obsidian visual layout with CSS snippets. Use for restyling tabs, sidebars, note surfaces, properties, backlinks, graph or file-explorer UI, o",
+   "usage": "说『记到 Obsidian』或『查笔记』",
+   "suite": ""
+  },
+  {
+   "name": "openclaw-history-ingest",
+   "category": "openclaw-history-ingest",
+   "source": "local",
+   "description": "Ingest OpenClaw session/history data into Obsidian as distilled knowledge. Use for importing or mining ~/.openclaw sessions, memory files, or logs; use wiki-age",
+   "usage": "触发词：「importing or mining ~/.openclaw sessions, memory files, or l」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "pi-history-ingest",
+   "category": "pi-history-ingest",
+   "source": "local",
+   "description": "Ingest Pi coding-agent session history into Obsidian as distilled knowledge. Use for importing or mining ~/.pi/agent/sessions or Pi conversation logs; use wiki-",
+   "usage": "触发词：「importing or mining ~/.pi/agent/sessions or pi conversation 」相关的需求",
    "suite": ""
   },
   {
@@ -2066,6 +2373,30 @@
    "suite": ""
   },
   {
+   "name": "session-brain",
+   "category": "session-brain",
+   "source": "local",
+   "description": "Build or refresh a browser-viewable topic graph over Claude session history using local clustering. Use for mapping or clustering sessions, recent or stale topi",
+   "usage": "触发词：「mapping or clustering sessions, recent or stale topi」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "session-search",
+   "category": "session-search",
+   "source": "local",
+   "description": "Search the session-brain graph for a past agent session by topic and load the winning transcript into the current conversation. Use for finding which session ha",
+   "usage": "触发词：「finding which session ha」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "skill-creator",
+   "category": "skill-creator",
+   "source": "local",
+   "description": "Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, edit, or optimize an e",
+   "usage": "触发词：「users want to create a skill from scratch, edit, or optimize」相关的需求",
+   "suite": ""
+  },
+  {
    "name": "xurl",
    "category": "social-media",
    "source": "local",
@@ -2231,6 +2562,14 @@
    "source": "hub",
    "description": "Use when you have a written implementation plan to execute in a separate session with review checkpoints",
    "usage": "触发词：「you have a written implementation plan to execute in a separ」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "flutter-setup",
+   "category": "software-development",
+   "source": "local",
+   "description": "Use when building or running Flutter on this Windows box.",
+   "usage": "触发词：「building or running flutter on this windows box」相关的需求",
    "suite": ""
   },
   {
@@ -2722,6 +3061,22 @@
    "suite": ""
   },
   {
+   "name": "tag-taxonomy",
+   "category": "tag-taxonomy",
+   "source": "local",
+   "description": "Apply and maintain the wiki's controlled tag vocabulary. Use for choosing, normalizing, auditing, or extending tags when creating or updating wiki pages; consul",
+   "usage": "触发词：「choosing, normalizing, auditing, or extending tags when crea」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "vault-skill-factory",
+   "category": "vault-skill-factory",
+   "source": "local",
+   "description": "Create a reviewable Agent Skill package from mature curated wiki pages. Use when turning verified vault knowledge into a reusable skill. Reads the vault and wri",
+   "usage": "触发词：「turning verified vault knowledge into a reusable skill. read」相关的需求",
+   "suite": ""
+  },
+  {
    "name": "astro-github-pages",
    "category": "web",
    "source": "local",
@@ -2751,6 +3106,174 @@
    "source": "local",
    "description": "Use when scraping web pages with Scrapling.",
    "usage": "说『爬XX网站』或『抓取XX数据』",
+   "suite": ""
+  },
+  {
+   "name": "wiki-agent",
+   "category": "wiki-agent",
+   "source": "local",
+   "description": "Search one AI agent's raw history for a specific topic, ingest only matching sessions, and return a synthesized answer. Use for targeted cross-agent recall; use",
+   "usage": "触发词：「targeted cross-agent recall; use」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "wiki-capture",
+   "category": "wiki-capture",
+   "source": "local",
+   "description": "Turn the current conversation or finding into a structured permanent wiki note. Use for save/capture/preserve requests; QUICK MODE writes a fast _raw/ note. Sup",
+   "usage": "触发词：「save/capture/preserve requests; quick mode writes a fast _ra」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "wiki-context-pack",
+   "category": "wiki-context-pack",
+   "source": "local",
+   "description": "Produce a token-bounded, citation-ready context slice from an existing",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
+  },
+  {
+   "name": "wiki-dashboard",
+   "category": "wiki-dashboard",
+   "source": "local",
+   "description": "Create dynamic, queryable Obsidian dashboard views using Bases or Dataview. Use for auto-updating tables, indexes, or structured views of vault content; not for",
+   "usage": "触发词：「auto-updating tables, indexes, or structured views of vault 」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "wiki-dedup",
+   "category": "wiki-dedup",
+   "source": "local",
+   "description": "Detect and merge wiki pages representing the same concept under different names. Use for page-identity deduplication and consolidation. Destructive merges requi",
+   "usage": "触发词：「page-identity deduplication and consolidation. destructive m」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "wiki-digest",
+   "category": "wiki-digest",
+   "source": "local",
+   "description": "Produce a day/week/month knowledge digest summarizing what was learned, updated, and connected in the wiki. Use for readable recent-learning summaries; wiki-sta",
+   "usage": "触发词：「readable recent-learning summaries; wiki-sta」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "wiki-export",
+   "category": "wiki-export",
+   "source": "local",
+   "description": "Export the Obsidian wiki graph to JSON, GraphML, Neo4j Cypher, Postgres/SQL, HTML, or OKF bundles. Use when transferring or visualizing wiki data in external to",
+   "usage": "触发词：「transferring or visualizing wiki data in external to」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "wiki-history-ingest",
+   "category": "wiki-history-ingest",
+   "source": "local",
+   "description": "Route generic agent-history ingestion requests to the appropriate specialized history-ingest skill. Use when the user asks to ingest AI-agent history without di",
+   "usage": "触发词：「the user asks to ingest ai-agent history without di」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "wiki-import",
+   "category": "wiki-import",
+   "source": "local",
+   "description": "Import a wiki graph into the current vault from graph.json or an OKF/markdown bundle. Use for transferring previously exported wiki content between vaults; pair",
+   "usage": "触发词：「transferring previously exported wiki content between vaults」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "wiki-ingest",
+   "category": "wiki-ingest",
+   "source": "local",
+   "description": "Ingest new documents, raw text, folders, or URLs into the Obsidian wiki as distilled, linked knowledge. Use for general wiki ingestion when no more specific ing",
+   "usage": "触发词：「general wiki ingestion when no more specific ing」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "wiki-lint",
+   "category": "wiki-lint",
+   "source": "local",
+   "description": "Audit wiki health: broken links, orphans, contradictions, stale content, lifecycle and tag issues. Use for maintenance or health checks. Default is report-only;",
+   "usage": "触发词：「maintenance or health checks. default is report-only;」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "wiki-narrate",
+   "category": "wiki-narrate",
+   "source": "local",
+   "description": "Turn a wiki topic into a cited Markdown briefing, plain-language explanation, or",
+   "usage": "有相关需求时直接说，我会自动调用该技能",
+   "suite": ""
+  },
+  {
+   "name": "wiki-query",
+   "category": "wiki-query",
+   "source": "local",
+   "description": "Search and synthesize answers from the compiled Obsidian wiki, including cited and multi-hop answers. Use for questions about existing wiki knowledge or fast in",
+   "usage": "触发词：「questions about existing wiki knowledge or fast in」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "wiki-rebuild",
+   "category": "wiki-rebuild",
+   "source": "local",
+   "description": "Archive and rebuild wiki knowledge from source, or restore a prior archive. Use for full restart/recovery when incremental repair is inappropriate; this is broa",
+   "usage": "触发词：「full restart/recovery when incremental repair is inappropria」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "wiki-research",
+   "category": "wiki-research",
+   "source": "local",
+   "description": "Perform multi-round web research on a topic, synthesize the findings, and file structured results into the Obsidian wiki. Use for comprehensive web-sourced rese",
+   "usage": "触发词：「comprehensive web-sourced rese」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "wiki-setup",
+   "category": "wiki-setup",
+   "source": "local",
+   "description": "Initialize or repair an Obsidian wiki vault's required structure and configuration. Use for new-vault setup, .env/config creation, reconfiguration, or broken se",
+   "usage": "触发词：「new-vault setup, .env/config creation, reconfiguration, or b」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "wiki-stage-commit",
+   "category": "wiki-stage-commit",
+   "source": "local",
+   "description": "Review staged wiki writes and promote accepted pages to final locations when WIKI_STAGED_WRITES is enabled. Use for staging approval/commit; rejected pages retu",
+   "usage": "触发词：「staging approval/commit; rejected pages retu」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "wiki-status",
+   "category": "wiki-status",
+   "source": "local",
+   "description": "Report wiki ingestion/completeness state, pending source delta, structural insights, or maintenance equilibrium. Use for remaining-work/status questions, hubs a",
+   "usage": "触发词：「remaining-work/status questions, hubs a」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "wiki-switch",
+   "category": "wiki-switch",
+   "source": "local",
+   "description": "List, create, or switch named Obsidian wiki vault profiles under the global config directory. Use when changing the active vault, checking which vault is active",
+   "usage": "触发词：「changing the active vault, checking which vault is active」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "wiki-synthesize",
+   "category": "wiki-synthesize",
+   "source": "local",
+   "description": "Find recurring concept combinations across the wiki that lack an explicit synthesis page, then create cross-cutting synthesis pages. Use for knowledge synthesis",
+   "usage": "触发词：「knowledge synthesis」相关的需求",
+   "suite": ""
+  },
+  {
+   "name": "wiki-update",
+   "category": "wiki-update",
+   "source": "local",
+   "description": "Sync knowledge from the current project into the Obsidian wiki. Use when work already in the current project should be distilled into the vault; named-vault rou",
+   "usage": "触发词：「work already in the current project should be distilled into」相关的需求",
    "suite": ""
   }
  ]
