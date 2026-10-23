@@ -1,21 +1,21 @@
 {
- "generatedAt": "2026-10-17 22:01",
- "total": 374,
+ "generatedAt": "2026-10-23 23:56",
+ "total": 365,
  "bySource": {
   "builtin": 0,
   "hub": 6,
-  "local": 368
+  "local": 359
  },
  "categories": [
-  {
-   "id": "software-development",
-   "count": 81,
-   "icon": "💻"
-  },
   {
    "id": "product-management",
    "count": 80,
    "icon": "📦"
+  },
+  {
+   "id": "software-development",
+   "count": 76,
+   "icon": "💻"
   },
   {
    "id": "matlab",
@@ -24,7 +24,7 @@
   },
   {
    "id": "research",
-   "count": 47,
+   "count": 44,
    "icon": "🔬"
   },
   {
@@ -48,14 +48,14 @@
    "icon": ""
   },
   {
-   "id": "web",
-   "count": 4,
-   "icon": "🌐"
-  },
-  {
    "id": "media",
    "count": 3,
    "icon": "🎬"
+  },
+  {
+   "id": "web",
+   "count": 3,
+   "icon": "🌐"
   },
   {
    "id": "email",
@@ -2005,14 +2005,6 @@
    "suite": ""
   },
   {
-   "name": "academic-paper-pipeline",
-   "category": "research",
-   "source": "local",
-   "description": "Academic papers with real experiments, rendered to Word/PDF.",
-   "usage": "写论文/文献综述/投稿时让我用这套流程",
-   "suite": ""
-  },
-  {
    "name": "bottleneck-hunter",
    "category": "research",
    "source": "local",
@@ -2229,14 +2221,6 @@
    "suite": ""
   },
   {
-   "name": "investment-daily-snapshot",
-   "category": "research",
-   "source": "local",
-   "description": "Use for daily invest snapshot or Tencent qt quote fetching.",
-   "usage": "触发词：「daily invest snapshot or tencent qt quote fetching」相关的需求",
-   "suite": ""
-  },
-  {
    "name": "lab-report-writer",
    "category": "research",
    "source": "local",
@@ -2349,14 +2333,6 @@
    "suite": ""
   },
   {
-   "name": "stock-quote-fetch",
-   "category": "research",
-   "source": "local",
-   "description": "Use when fetching live stock quotes from free APIs.",
-   "usage": "触发词：「fetching live stock quotes from free apis」相关的需求",
-   "suite": ""
-  },
-  {
    "name": "syllabus",
    "category": "research",
    "source": "local",
@@ -2457,14 +2433,6 @@
    "category": "software-development",
    "source": "local",
    "description": "Analyzes Android apps to identify key user workflows for AppFunctions",
-   "usage": "有相关需求时直接说，我会自动调用该技能",
-   "suite": ""
-  },
-  {
-   "name": "astro-blog-github-pages",
-   "category": "software-development",
-   "source": "local",
-   "description": "Astro blog on GitHub Pages: theme customize, CMS, deploy.",
    "usage": "有相关需求时直接说，我会自动调用该技能",
    "suite": ""
   },
@@ -2586,14 +2554,6 @@
    "source": "local",
    "description": "GitHub account automation: SSH 443, gh CLI, repos, Pages.",
    "usage": "有相关需求时直接说，我会自动调用该技能",
-   "suite": ""
-  },
-  {
-   "name": "github-account-migration",
-   "category": "software-development",
-   "source": "local",
-   "description": "Use when migrating GitHub/Gitee/AtomGit accounts.",
-   "usage": "说『同步/迁移到三平台』",
    "suite": ""
   },
   {
@@ -2805,14 +2765,6 @@
    "suite": ""
   },
   {
-   "name": "optical-signal-decoding",
-   "category": "software-development",
-   "source": "local",
-   "description": "Use when decoding screen RGB light signals via phone camera.",
-   "usage": "触发词：「decoding screen rgb light signals via phone camera」相关的需求",
-   "suite": ""
-  },
-  {
    "name": "pi-coding-agent",
    "category": "software-development",
    "source": "local",
@@ -2865,14 +2817,6 @@
    "category": "software-development",
    "source": "local",
    "description": "Provides knowledge and workflows to implement Android's Restore Credentials",
-   "usage": "有相关需求时直接说，我会自动调用该技能",
-   "suite": ""
-  },
-  {
-   "name": "run-node-dev-projects",
-   "category": "software-development",
-   "source": "local",
-   "description": "Run or clean up a Node web dev project dropped in D:\\code.",
    "usage": "有相关需求时直接说，我会自动调用该技能",
    "suite": ""
   },
@@ -3037,14 +2981,6 @@
    "suite": ""
   },
   {
-   "name": "windows-shortcut-icons",
-   "category": "software-development",
-   "source": "local",
-   "description": "Use when changing a Windows shortcut's icon.",
-   "usage": "触发词：「changing a windows shortcut's icon」相关的需求",
-   "suite": ""
-  },
-  {
    "name": "writing-plans",
    "category": "software-development",
    "source": "hub",
@@ -3074,14 +3010,6 @@
    "source": "local",
    "description": "Create a reviewable Agent Skill package from mature curated wiki pages. Use when turning verified vault knowledge into a reusable skill. Reads the vault and wri",
    "usage": "触发词：「turning verified vault knowledge into a reusable skill. read」相关的需求",
-   "suite": ""
-  },
-  {
-   "name": "astro-github-pages",
-   "category": "web",
-   "source": "local",
-   "description": "Maintain the Astro blog on GitHub Pages (base, API, CMS).",
-   "usage": "有相关需求时直接说，我会自动调用该技能",
    "suite": ""
   },
   {
